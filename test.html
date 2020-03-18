@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<div id="demo"> </div>
+<div id="demo1"> </div>
+<div id="demo2"> </div>
+<div id="demo3"> </div>
+<div id="demo4"> </div>
+<div id="demo5"> </div>
+
+
+<script>
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = yyyy + '-' + mm + '-' + dd;
+console.log(today);
+var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      //document.getElementById("demo").innerHTML =
+      //this.responseText;
+	  arr=[]
+	  arr2=[]
+	  arr3=[]
+	  arr4=[]
+	  arr5=[]
+	  arr6=[]
+	  var res = this.responseText;
+	  var obj = JSON.parse(res);
+	  
+	  for (var i in res)
+	  {
+		  if(JSON.stringify(obj.rows[i]))
+		  {
+	  arr.push(obj.rows[i])
+		  }
+	  }
+	  
+	  //document.getElementById("demo").innerHTML =JSON.stringify(arr[arr.length-1])
+	  for (var j in arr)
+	  {
+		  if (JSON.stringify(arr[j].value.report_time).includes (today))
+		  {
+		arr2.push (JSON.stringify(arr[j].value.state))
+		arr3.push (JSON.stringify(arr[j].value.confirmed_india))
+		arr4.push (JSON.stringify(arr[j].value.confirmed_foreign))
+		arr5.push (JSON.stringify(arr[j].value.cured))
+		arr6.push (JSON.stringify(arr[j].value.death))
+		  }
+		
+		//document.getElementById("demo1").innerHTML = JSON.stringify(arr[j].value);
+	  }
+	  //function checkAdult() {
+  	//return "up";
+		//}
+		
+	
+	  
+	  //document.getElementById("demo").innerHTML = arr2.findIndex(checkAdult);
+	  document.getElementById("demo").innerHTML = arr2.reverse();
+	  document.getElementById("demo2").innerHTML = arr3.reverse();
+	  document.getElementById("demo3").innerHTML = arr4.reverse();
+	  document.getElementById("demo4").innerHTML = arr5.reverse();
+	  document.getElementById("demo5").innerHTML = arr6.reverse();
+	  
+    }
+  };
+  xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://data.thejeshgn.com/covid19/_design/india/_view/incidents", true);
+  xhttp.send();
+  </script>
+</body>
+</html>

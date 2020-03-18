@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="leaflet/leaflet.css"/>
+<script src="leaflet/leaflet.js"></script>
+<script src="india_mod2.js"></script>
+<title>Untitled Document</title>
+<style>
+    #map{ height: 550px; }
+	/*Legend specific*/
+.legend {
+  padding: 6px 8px;
+  font: 14px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  /*box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);*/
+  /*border-radius: 5px;*/
+  line-height: 24px;
+  color: #555;
+}
+.legend h4 {
+  text-align: center;
+  font-size: 16px;
+  margin: 2px 12px 8px;
+  color: #777;
+}
+
+.legend span {
+  position: relative;
+  bottom: 3px;
+}
+
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin: 0 8px 0 0;
+  opacity: 0.7;
+}
+
+.legend i.icon {
+  background-size: 18px;
+  background-color: rgba(255, 255, 255, 1);
+}
+  </style>
+</head>
+
+<body>
+
+<h2 align="center">LIVE CORONA MAP OF INDIA </h2>
+<p id="date" align="center"></p>
+<div id="map"></div>
+<div id="demo"> </div>
+<div id="demo1"> </div>
+<div id="demo2"> </div>
+<div id="demo3"> </div>
+<div id="demo4"> </div>
+<div id="demo5"> </div>
+
+<script>
+
+var arr=["JAMMU & KASHMIR","LADAKH","GOA"];
+var arr1=["100","200","300"];
+
+
+
+var today = new Date();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+console.log(today.getHours())
+if (today.getHours() >= 17 && today.getHours() <=23 )
+{
+var dd = String(today.getDate()).padStart(2, '0');
+}
+else
+{
+var dd = String(today.getDate()).padStart(2, '0') - 1;
+}
+
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = yyyy + '-' + mm + '-' + dd;
+console.log(today);
+document.getElementById("date").innerHTML = today;
+arr=[]
+	  arr2=[]
+	  arr3=[]
+	  arr4=[]
+	  arr5=[]
+	  arr6=[]
+
+var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      //document.getElementById("demo").innerHTML =
+      //this.responseText;
+	  
+	  var res = this.responseText;
+	  var obj = JSON.parse(res);
+	  
+	  for (var i in res)
+	  {
+		  if(JSON.stringify(obj.rows[i]))
+		  {
+	  arr.push(obj.rows[i])
+		  }
+	  }
+	  
+	  //document.getElementById("demo").innerHTML =JSON.stringify(arr[arr.length-1])
+	  for (var j in arr)
+	  {
+		  if (JSON.stringify(arr[j].value.report_time).includes (today))
+		  {
+		arr2.push (JSON.stringify(arr[j].value.state).replace(/^"(.*)"$/, '$1'))
+		arr3.push (JSON.stringify(arr[j].value.confirmed_india))
+		arr4.push (JSON.stringify(arr[j].value.confirmed_foreign))
+		arr5.push (JSON.stringify(arr[j].value.cured))
+		arr6.push (JSON.stringify(arr[j].value.death))
+		  }
+		  
+		
+		//document.getElementById("demo1").innerHTML = JSON.stringify(arr[j].value);
+	  }
+	  //function checkAdult() {
+  	//return "up";
+		//}
+		
+document.getElementById("demo").style.visibility = "hidden";
+	document.getElementById("demo2").style.visibility = "hidden";
+	document.getElementById("demo3").style.visibility = "hidden";
+	document.getElementById("demo4").style.visibility = "hidden";
+	document.getElementById("demo5").style.visibility = "hidden";
+	  
+	  //document.getElementById("demo").innerHTML = arr2.findIndex(checkAdult);
+	  document.getElementById("demo").innerHTML = arr2;
+	  document.getElementById("demo2").innerHTML = arr3;
+	  document.getElementById("demo3").innerHTML = arr4;
+	  document.getElementById("demo4").innerHTML = arr5;
+	  document.getElementById("demo5").innerHTML = arr6;
+	  
+	  
+    }
+  };
+  
+  xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://data.thejeshgn.com/covid19/_design/india/_view/incidents", true);
+  xhttp.send();
+
+
+
+
+
+  var map = L.map('map').setView([23.076748, 78.292226 ], 5);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+//function onEachFeature(feature, layer) {
+	//var popupContent = "<p>I started out as a GeoJSON " +
+				//feature.geometry.type + ", but now I'm a Leaflet vector!</p>";
+    // does this feature have a property named popupContent?
+    //if (feature.properties && feature.properties.popupContent) {
+        //layer.bindPopup(feature.properties.popupContent);
+    //}
+//}
+
+
+function getColor(d) {
+    return d >= 0 && d <5 ? '#DC143C' :
+           d > 5 && d < 15  ? '#800026' :
+           d > 15 && d<25 ? '#8b0023' :
+		   d > 25 ? '#000000' :
+           
+                      '#000000';
+}
+
+
+
+
+
+
+
+setTimeout(function(){
+	var arr7=document.getElementById("demo").innerHTML;
+	var arr8=document.getElementById("demo2").innerHTML;
+	var arr9=document.getElementById("demo3").innerHTML;
+	var arr10=document.getElementById("demo4").innerHTML;
+	var arr11=document.getElementById("demo5").innerHTML;
+	arr7=arr7.split(",");
+	arr8=arr8.split(",");
+	arr9=arr9.split(",");
+	arr10=arr10.split(",");
+	arr11=arr11.split(",");
+
+	function style(feature) {
+		for (var i in arr7)
+		{
+		if(arr7[i] == feature.properties.st_code)
+			{
+
+
+    return {
+		
+        fillColor: getColor(arr8[i]),
+		weight: 2,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.7
+	};
+			}
+		}
+}
+
+
+	
+	L.geoJson(india_mod2, {
+		style: style,
+    onEachFeature: function (feature, layer) {
+		
+		for (var i in arr7)
+		{
+			
+			if(arr7[i] == feature.properties.st_code)
+			{
+       layer.bindPopup("<p>"+ feature.properties.S_NAME +" <br> Confirmed Indian " + arr8[i] + "<br> Confirmed Foreigner " + arr9[i] + "<br> Cured " + arr10[i] + "<br> Death " + arr11[i] + "<br></p>")}}}
+}).addTo(map);
+	  }, 5000);
+
+	  var legend = L.control({ position: "bottomleft" });
+
+legend.onAdd = function(map) {
+  var div = L.DomUtil.create("div", "legend");
+  div.innerHTML += "<h4>As per Infected Indian</h4>";
+  div.innerHTML += '<i style="background:#000000"></i><span>Severe</span><br>';
+  div.innerHTML += '<i style="background: #800026"></i><span>Moderate</span><br>';
+  div.innerHTML += '<i style="background: #DC143C"></i><span>Low</span><br>';
+  div.innerHTML += '<i style="background: #0000FF"></i><span>No patient</span><br>';
+  //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
+  //div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
+  //div.innerHTML += '<i class="icon" style="background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/194515-200.png);background-repeat: no-repeat;"></i><span>Grænse</span><br>';
+  
+  
+
+  return div;
+};
+
+legend.addTo(map);
+
+
+  </script>
+</body>
+</html>
