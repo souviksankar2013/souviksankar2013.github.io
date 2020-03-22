@@ -51,6 +51,7 @@
 
 <h2 align="center">LIVE CORONA MAP OF INDIA </h2>
 <p id="date" align="center"></p>
+<!-- <div id="demo6" align="center"> </div> -->
 <div id="map"></div>
 
  <div align="center">
@@ -63,6 +64,7 @@
 <div id="demo4"> </div>
 <div id="demo5"> </div>
 
+
 <script>
 
 var arr=["JAMMU & KASHMIR","LADAKH","GOA"];
@@ -73,7 +75,7 @@ var arr1=["100","200","300"];
 var today = new Date();
 var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 console.log(today.getHours())
-if (today.getHours() >= 17 && today.getHours() <=23 )
+if (today.getHours() >= 11 && today.getHours() <=23 )
 {
 var dd = String(today.getDate()).padStart(2, '0');
 }
@@ -87,7 +89,7 @@ var yyyy = today.getFullYear();
 
 today = yyyy + '-' + mm + '-' + dd;
 console.log(today);
-document.getElementById("date").innerHTML = today;
+
 arr=[]
 	  arr2=[]
 	  arr3=[]
@@ -122,6 +124,7 @@ var xhttp = new XMLHttpRequest();
 		arr4.push (JSON.stringify(arr[j].value.confirmed_foreign))
 		arr5.push (JSON.stringify(arr[j].value.cured))
 		arr6.push (JSON.stringify(arr[j].value.death))
+		document.getElementById("date").innerHTML = "<p>Updated till: </p>"+arr[j].value.report_time.split("T");
 		  }
 		  
 		
@@ -139,7 +142,15 @@ document.getElementById("demo").style.visibility = "hidden";
 	  
 	  //document.getElementById("demo").innerHTML = arr2.findIndex(checkAdult);
 	  document.getElementById("demo").innerHTML = arr2;
+	  
 	  document.getElementById("demo2").innerHTML = arr3;
+	  var sum=0;
+		for (var i in arr3)
+		{
+			sum += parseInt(arr3[i]) +parseInt(arr4[i]) ;
+		}
+
+	  document.getElementById("demo6").innerHTML = "<h2>Confirmed Total: "+sum+"</h2";
 	  document.getElementById("demo3").innerHTML = arr4;
 	  document.getElementById("demo4").innerHTML = arr5;
 	  document.getElementById("demo5").innerHTML = arr6;
