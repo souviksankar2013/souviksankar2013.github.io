@@ -122,6 +122,7 @@ var xhttp = new XMLHttpRequest();
 		arr2.push (JSON.stringify(arr[j].value.state).replace(/^"(.*)"$/, '$1'))
 		arr3.push (JSON.stringify(arr[j].value.confirmed_india))
 		arr4.push (JSON.stringify(arr[j].value.confirmed_foreign))
+		//console.log(JSON.stringify(arr[j].value.cured))
 		arr5.push (JSON.stringify(arr[j].value.cured))
 		arr6.push (JSON.stringify(arr[j].value.death))
 		document.getElementById("date").innerHTML = "<p>Updated till: </p>"+arr[j].value.report_time.split("T");
@@ -134,11 +135,12 @@ var xhttp = new XMLHttpRequest();
   	//return "up";
 		//}
 		
-document.getElementById("demo").style.visibility = "hidden";
-	document.getElementById("demo2").style.visibility = "hidden";
-	document.getElementById("demo3").style.visibility = "hidden";
-	document.getElementById("demo4").style.visibility = "hidden";
-	document.getElementById("demo5").style.visibility = "hidden";
+//document.getElementById("demo").style.visibility = "hidden";
+	//document.getElementById("demo2").style.visibility = "hidden";
+	//document.getElementById("demo3").style.visibility = "hidden";
+	//document.getElementById("demo4").style.visibility = "hidden";
+	//document.getElementById("demo5").style.visibility = "hidden";
+	
 	  
 	  //document.getElementById("demo").innerHTML = arr2.findIndex(checkAdult);
 	  document.getElementById("demo").innerHTML = arr2;
@@ -149,8 +151,8 @@ document.getElementById("demo").style.visibility = "hidden";
 		{
 			sum += parseInt(arr3[i]) +parseInt(arr4[i]) ;
 		}
-
-	  document.getElementById("demo6").innerHTML = "<h2>Confirmed Total: "+sum+"</h2";
+		//console.log(arr4)
+	  //document.getElementById("demo6").innerHTML = "<h2>Confirmed Total: "+sum+"</h2";
 	  document.getElementById("demo3").innerHTML = arr4;
 	  document.getElementById("demo4").innerHTML = arr5;
 	  document.getElementById("demo5").innerHTML = arr6;
@@ -199,6 +201,7 @@ function getColor(d) {
 
 setTimeout(function(){
 	var arr7=document.getElementById("demo").innerHTML;
+	
 	var arr8=document.getElementById("demo2").innerHTML;
 	var arr9=document.getElementById("demo3").innerHTML;
 	var arr10=document.getElementById("demo4").innerHTML;
@@ -208,7 +211,7 @@ setTimeout(function(){
 	arr9=arr9.split(",");
 	arr10=arr10.split(",");
 	arr11=arr11.split(",");
-
+	
 	function style(feature) {
 		for (var i in arr7)
 		{
