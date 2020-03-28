@@ -200,10 +200,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 function getColor(d) {
     return d >= 0 && d <=20 ? '#DC143C' :
            d > 20 && d <= 30  ? '#800026' :
-           d > 30 && d<=50 ? '#8b0023' :
-		   d > 50 ? '#000000' :
+           d > 30 && d<=60 ? '#8b0023' :
+		   d > 60 ? '#000000' :
            
-                      '0000ff';
+                      '#000000';
 }
 
 
@@ -265,8 +265,8 @@ setTimeout(function(){
 legend.onAdd = function(map) {
   var div = L.DomUtil.create("div", "legend");
   div.innerHTML += "<h4>As per Infected Indian</h4>";
-  div.innerHTML += '<i style="background:#000000"></i><span>50+</span><br>';
-  div.innerHTML += '<i style="background: #800026"></i><span>20-50</span><br>';
+  div.innerHTML += '<i style="background:#000000"></i><span>60+</span><br>';
+  div.innerHTML += '<i style="background: #800026"></i><span>20-60</span><br>';
   div.innerHTML += '<i style="background: #DC143C"></i><span>0-20</span><br>';
   div.innerHTML += '<i style="background: #0000FF"></i><span>No patient</span><br>';
   //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
