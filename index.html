@@ -108,7 +108,7 @@ console.log(today);
 arr=[]
 	  arr2=[]
 	  arr3=[]
-	  arr4=[]
+	  //arr4=[]
 	  arr5=[]
 	  arr6=[]
 
@@ -135,8 +135,9 @@ var xhttp = new XMLHttpRequest();
 		  if (JSON.stringify(arr[j].value.report_time).includes (today))
 		  {
 		arr2.push (JSON.stringify(arr[j].value.state).replace(/^"(.*)"$/, '$1'))
-		arr3.push (JSON.stringify(arr[j].value.confirmed_india))
-		arr4.push (JSON.stringify(arr[j].value.confirmed_foreign))
+		// arr3.push (JSON.stringify(arr[j].value.confirmed_india))
+		arr3.push (JSON.stringify(arr[j].value.confirmed))
+		//arr4.push (JSON.stringify(arr[j].value.confirmed_foreign))
 		//console.log(JSON.stringify(arr[j].value.cured))
 		arr5.push (JSON.stringify(arr[j].value.cured))
 		arr6.push (JSON.stringify(arr[j].value.death))
@@ -161,14 +162,14 @@ document.getElementById("demo").style.visibility = "hidden";
 	  document.getElementById("demo").innerHTML = arr2;
 	  
 	  document.getElementById("demo2").innerHTML = arr3;
-	  var sum=0;
-		for (var i in arr3)
-		{
-			sum += parseInt(arr3[i]) +parseInt(arr4[i]) ;
-		}
+	//   var sum=0;
+	// 	for (var i in arr3)
+	// 	{
+	// 		sum += parseInt(arr3[i]) +parseInt(arr4[i]) ;
+	// 	}
 		//console.log(arr4)
 	  //document.getElementById("demo6").innerHTML = "<h2>Confirmed Total: "+sum+"</h2";
-	  document.getElementById("demo3").innerHTML = arr4;
+	  //document.getElementById("demo3").innerHTML = arr4;
 	  document.getElementById("demo4").innerHTML = arr5;
 	  document.getElementById("demo5").innerHTML = arr6;
 	  
@@ -218,12 +219,12 @@ setTimeout(function(){
 	var arr7=document.getElementById("demo").innerHTML;
 	
 	var arr8=document.getElementById("demo2").innerHTML;
-	var arr9=document.getElementById("demo3").innerHTML;
+	//var arr9=document.getElementById("demo3").innerHTML;
 	var arr10=document.getElementById("demo4").innerHTML;
 	var arr11=document.getElementById("demo5").innerHTML;
 	arr7=arr7.split(",");
 	arr8=arr8.split(",");
-	arr9=arr9.split(",");
+	//arr9=arr9.split(",");
 	arr10=arr10.split(",");
 	arr11=arr11.split(",");
 	
@@ -258,7 +259,7 @@ setTimeout(function(){
 			
 			if(arr7[i] == feature.properties.st_code)
 			{
-       layer.bindPopup("<p>"+ feature.properties.S_NAME +" <br> Confirmed Indian " + arr8[i] + "<br> Confirmed Foreigner " + arr9[i] + "<br> Cured " + arr10[i] + "<br> Death " + arr11[i] + "<br></p>")}}}
+       layer.bindPopup("<p>"+ feature.properties.S_NAME +" <br> Confirmed :" + arr8[i] + "<br> Cured " + arr10[i] + "<br> Death " + arr11[i] + "<br></p>")}}}
 }).addTo(map);
 	  }, 5000);
 
