@@ -175,11 +175,18 @@ document.getElementById("demo").style.visibility = "hidden";
 	  var sum1=0
 	  var sum2=0
 	  
-	  
+	  if ([... new Set(arr4)].length > 1)
+	  {
+		  var tim = [... new Set(arr4)][1]
+	  }
+	  else
+	  {
+		var tim = [... new Set(arr4)][0]
+	  }
 
 		for (var i in arr3)
 		{
-			if (arr4[i] == [... new Set(arr4)][0])
+			if (arr4[i] == tim)
 			{
 			sum = sum + parseInt(arr3[i])
 			sum1 = sum1 + parseInt(arr5[i])
@@ -187,7 +194,7 @@ document.getElementById("demo").style.visibility = "hidden";
 			}
 		}
 
-		console.log(sum2)
+		console.log([... new Set(arr4)].length)
 
 		document.getElementById("demo3").innerHTML = "<h3>Total Confirmed: "+sum + "&nbsp&nbsp&nbspTotal Cured: "+sum1+"&nbsp&nbsp&nbspTotal Death: "+sum2+"</h3>";
 
