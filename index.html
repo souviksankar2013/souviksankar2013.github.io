@@ -3,11 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="virus-06-512.webp" />
 <link rel="stylesheet" href="leaflet/leaflet.css"/>
+<script src="tabletop.js"></script>
 <script src="leaflet/leaflet.js"></script>
+<script src="districts_729.js"></script>
 <script src="india_mod2.js"></script>
+<script src="states.js"></script>
+
 <title>India Corona Live Update</title>
 <style>
+	html
+	{
+		width:100%
+	}
     #map{ height: 550px;
 	 }
 	/*Legend specific*/
@@ -55,7 +64,7 @@
 <!-- <div id="demo6" align="center"> </div> -->
 <div align="center" id="demo3"> </div>
 <h3 align="center">
-<a href="subdist.html">Go To District Map</a>
+<!-- <a href="subdist.html">Go To District Map</a> -->
 
 </h3>
 <div id="map"></div>
@@ -81,17 +90,28 @@
 <div id="demo5"> </div>
 
 
+<div id="demo6"> </div>
+<div id="demo7"> </div>
+<div id="demo8"> </div>
+<div id="demo9"> </div>
+<div id="demo10"> </div>
+
+
+<!-- <div id="demo11"> </div>
+<div id="demo12"> </div> -->
+
+
 <script>
 
-var arr=["JAMMU & KASHMIR","LADAKH","GOA"];
-var arr1=["100","200","300"];
+// var arr=["JAMMU & KASHMIR","LADAKH","GOA"];
+// var arr1=["100","200","300"];
 
 
 
 var today = new Date();
 var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 console.log(today.getHours())
-if (today.getHours() >= 17 && today.getHours() <=23 )
+if (today.getHours() >= 20 && today.getHours() <=23 )
 {
 var dd = String(today.getDate()).padStart(2, '0');
 }
@@ -112,6 +132,52 @@ arr=[]
 	  arr4=[]
 	  arr5=[]
 	  arr6=[]
+
+
+	  arr17=[]
+arr18=[]
+arr19=[]
+arr20=[]
+arr21=[]
+
+
+
+
+
+
+Tabletop.init( { key: "1AL1cj_33m3D7JkT-_wPB7LPJAqIfV2Y5XVMui7nczy4", callback: getdata, simpleSheet: false } );
+
+function getdata(d, tabletop) {
+		var data, metadata = [];
+		data = tabletop.sheets("raw").elements;
+		metadata = tabletop.sheets("readme").elements;
+
+
+		
+		
+		for ( var i = 0; i < data.length; i++ ){
+			arr17.push(data[i]["District"])
+			arr18.push(data[i]["Confirmed Cases"])
+			arr19.push(data[i]["Discharged"])
+			arr20.push(data[i]["Deaths"])
+			arr21.push(data[i]["Active"])
+		}
+		document.getElementById("demo6").innerHTML = arr17
+		document.getElementById("demo7").innerHTML = arr18
+		document.getElementById("demo8").innerHTML = arr19
+		document.getElementById("demo9").innerHTML = arr20
+		document.getElementById("demo10").innerHTML = arr21
+
+		document.getElementById("demo6").style.visibility = "hidden";
+	document.getElementById("demo7").style.visibility = "hidden";
+	document.getElementById("demo8").style.visibility = "hidden";
+	document.getElementById("demo9").style.visibility = "hidden";
+	document.getElementById("demo10").style.visibility = "hidden";
+
+
+	}
+
+
 
 var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -205,7 +271,7 @@ document.getElementById("demo").style.visibility = "hidden";
     }
   };
   
-  xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://data.thejeshgn.com/covid19/_design/india/_view/incidents?descending=false&nounce", true);
+  xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://data.thejeshgn.com/covid19/_design/india/_view/incidents?nounce", true);
   xhttp.send();
 
 
@@ -236,6 +302,182 @@ function getColor(d) {
            
                       '#000000';
 }
+
+function getColor1(d) {
+    return d >= 0 && d <5 ? '#DC143C' :
+           d > 5 && d < 10  ? '#800026' :
+           d > 10 && d<15 ? '#8b0023' :
+		   d > 15 ? '#000000' :
+           
+                      '#000000';
+}
+
+function clean_map() {
+    map.eachLayer(function (layer) {
+        if (layer instanceof L.GeoJSON)
+        //Do marker specific actions here
+
+        {
+            map.removeLayer(layer);
+
+        }
+        //console.log(layer);
+
+
+    });
+}
+
+
+
+
+var legend1 = L.control({ position: "bottomleft" });
+
+legend1.onAdd = function(map) {
+  var div = L.DomUtil.create("div", "legend");
+  div.innerHTML += "<h4>Total Confirmed</h4>";
+  div.innerHTML += '<i style="background:#000000"></i><span>20+</span><br>';
+  div.innerHTML += '<i style="background: #800026"></i><span>5-20</span><br>';
+  div.innerHTML += '<i style="background: #DC143C"></i><span>0-5</span><br>';
+  div.innerHTML += '<i style="background: #0000FF"></i><span>No patient</span><br>';
+  //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
+  //div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
+  //div.innerHTML += '<i class="icon" style="background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/194515-200.png);background-repeat: no-repeat;"></i><span>Grænse</span><br>';
+  
+  
+
+  return div;
+};
+
+
+var legend = L.control({ position: "bottomleft" });
+
+legend.onAdd = function(map) {
+  var div = L.DomUtil.create("div", "legend");
+  div.innerHTML += "<h4>Total Confirmed</h4>";
+  div.innerHTML += '<i style="background:#000000"></i><span>100+</span><br>';
+  div.innerHTML += '<i style="background: #800026"></i><span>20-100</span><br>';
+  div.innerHTML += '<i style="background: #DC143C"></i><span>0-20</span><br>';
+  div.innerHTML += '<i style="background: #0000FF"></i><span>No patient</span><br>';
+  //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
+  //div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
+  //div.innerHTML += '<i class="icon" style="background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/194515-200.png);background-repeat: no-repeat;"></i><span>Grænse</span><br>';
+  
+  
+
+  return div;
+};
+legend.addTo(map);
+
+
+
+
+setTimeout(function(){
+	var arr27=document.getElementById("demo6").innerHTML;
+	var arr28=document.getElementById("demo7").innerHTML;
+	var arr29=document.getElementById("demo8").innerHTML;
+	var arr30=document.getElementById("demo9").innerHTML;
+	var arr31=document.getElementById("demo10").innerHTML;
+	arr27=arr27.split(",");
+	//console.log(arr27)
+	arr28=arr28.split(",");
+	arr29=arr29.split(",");
+	arr30=arr30.split(",");
+	arr31=arr31.split(",");
+
+	function style(feature) {
+
+		var color = "#feebe2";
+
+
+
+		for (var i in arr27)
+		{
+		if(arr27[i] == feature.properties.dtname)
+			{
+
+				if (arr28[i] > 20) color = "#000000";
+				else if (arr28[i] > 10 && arr28[i] <= 20 ) color = "#8b0023";
+				else if (arr28[i] > 5 && arr28[i] <= 10) color = "#800026";
+				else if (arr28[i] >= 1 && arr28[i] <= 5) color = "#DC143C";
+				else {color = "#feebe2";}
+
+				return {
+          fillColor: color,
+          weight: 1,
+          opacity: 0.4,
+          color: 'black',
+          dashArray: '1',
+		  fillOpacity: 0.7,
+		  
+		};
+	}
+}
+}
+
+
+
+function style1(feature)
+{
+	return{
+		
+		weight: 5,
+          opacity: 0.9,
+          color: "black",
+          fill: false
+	};
+}
+
+
+
+
+
+
+
+
+	var dist = L.geoJson(geodist, {
+		style: style,
+    onEachFeature: function (feature, layer) {
+		
+		for (var i in arr27)
+		{
+			
+			if(arr27[i] == feature.properties.dtname)
+			{
+       layer.bindPopup("<p>State: "+ feature.properties.stname +" <br> District :" + feature.properties.dtname +" <br> Confirmed :" + arr28[i] + "<br> Discharged " + arr29[i] + "<br> Death: " + arr30[i] + "<br> Active: " + arr31[i] + "<br></p>")}}}
+});
+
+var state1 = L.geoJson(geoStates,{
+		style: style1})
+
+
+
+
+		
+
+
+
+
+
+		map.on('zoomend', function (e) {
+			var currentZoom = map.getZoom();
+
+if (currentZoom >= 7)
+{
+	clean_map();
+	dist.addTo(map);
+	state1.addTo(map);
+	map.removeControl(legend);
+	legend1.addTo(map);
+	
+
+}
+
+});
+
+		
+	  }, 5000);
+
+
 
 
 
@@ -278,7 +520,7 @@ setTimeout(function(){
 
 
 	
-	L.geoJson(india_mod2, {
+	var state = L.geoJson(india_mod2, {
 		style: style,
     onEachFeature: function (feature, layer) {
 		
@@ -289,27 +531,101 @@ setTimeout(function(){
 			{
        layer.bindPopup("<p>"+ feature.properties.S_NAME +" <br> Confirmed :" + arr8[i] + "<br> Cured " + arr10[i] + "<br> Death " + arr11[i] + "<br></p>")}}}
 }).addTo(map);
+
+
+
+
+
+
+
+map.on('zoomend', function (e) {
+			var currentZoom = map.getZoom();
+
+if (currentZoom < 7)
+{
+	clean_map();
+    state.addTo(map)
+	map.removeControl(legend1);
+	legend.addTo(map);
+
+}
+
+});
+
+
+
 	  }, 5000);
 
-	  var legend = L.control({ position: "bottomleft" });
 
-legend.onAdd = function(map) {
-  var div = L.DomUtil.create("div", "legend");
-  div.innerHTML += "<h4>As per Infected Indian</h4>";
-  div.innerHTML += '<i style="background:#000000"></i><span>100+</span><br>';
-  div.innerHTML += '<i style="background: #800026"></i><span>20-100</span><br>';
-  div.innerHTML += '<i style="background: #DC143C"></i><span>0-20</span><br>';
-  div.innerHTML += '<i style="background: #0000FF"></i><span>No patient</span><br>';
-  //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
-  //div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
-  //div.innerHTML += '<i class="icon" style="background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/194515-200.png);background-repeat: no-repeat;"></i><span>Grænse</span><br>';
+
+
+
+
+// 	  var legend = L.control({ position: "bottomleft" });
+
+// legend.onAdd = function(map) {
+//   var div = L.DomUtil.create("div", "legend");
+//   div.innerHTML += "<h4>As per Infected Indian</h4>";
+//   div.innerHTML += '<i style="background:#000000"></i><span>100+</span><br>';
+//   div.innerHTML += '<i style="background: #800026"></i><span>20-100</span><br>';
+//   div.innerHTML += '<i style="background: #DC143C"></i><span>0-20</span><br>';
+//   div.innerHTML += '<i style="background: #0000FF"></i><span>No patient</span><br>';
+//   //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
+//   //div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
+//   //div.innerHTML += '<i class="icon" style="background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/194515-200.png);background-repeat: no-repeat;"></i><span>Grænse</span><br>';
   
   
 
-  return div;
-};
+//   return div;
+// };
+// legend.addTo(map);
 
-legend.addTo(map);
+
+//newwwww
+
+// map.on('zoomend', function (e) {
+//     zoom_based_layerchange();
+// });
+
+// function clean_map() {
+//     map.eachLayer(function (layer) {
+//         if (layer instanceof L.GeoJSON)
+//         //Do marker specific actions here
+
+//         {
+//             map.removeLayer(layer);
+
+//         }
+//         //console.log(layer);
+
+
+//     });
+// }
+
+
+
+// function zoom_based_layerchange() {
+//     //console.log(map.getZoom());
+//     //$("#zoomlevel").html(map.getZoom());
+//     var currentZoom = map.getZoom();
+
+//     if (currentZoom >= 7)
+//     {
+//         clean_map();
+//         state1.addTo(map);
+//         dist.addTo(map);
+
+//     }
+//     else
+//     {
+//         clean_map();
+//         state.addTo(map)
+//     }
+// }
+
+
+
+
 
 
   </script>
