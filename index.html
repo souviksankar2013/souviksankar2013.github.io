@@ -115,7 +115,7 @@ console.log(today.getHours())
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 if (today.getHours() >= 13 && today.getHours() <=23 )
 {
-var dd = parseInt(String(today.getDate()).padStart(2, '0'));
+var dd = 0+String(parseInt(String(today.getDate()).padStart(2, '0')));
 }
 else
 {
