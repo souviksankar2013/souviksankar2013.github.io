@@ -113,20 +113,20 @@ var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(
 console.log(today.getHours())
 
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-if (today.getHours() >= 20 && today.getHours() <=23 && parseInt(String(today.getDate()).padStart(2, '0')) > 1)
+if (today.getHours() >= 20 && today.getHours() <=23 )
 {
 var dd = parseInt(String(today.getDate()).padStart(2, '0'));
 }
-else if (today.getHours() < 20 && today.getHours() >23 && parseInt(String(today.getDate()).padStart(2, '0')) > 1)
+else
 {
 	
-var dd = parseInt(String(today.getDate()).padStart(2, '0')) -1;
+var dd =  0+String(parseInt(String(today.getDate()).padStart(2, '0')) -1);
 }
-else 
-{
-	var dd = parseInt(String(today.getDate()).padStart(2, '0')) +30;
-	var mm = 0+String(parseInt(String(today.getMonth() + 1).padStart(2, '0'))-1);
-}
+// else 
+// {
+// 	var dd = parseInt(String(today.getDate()).padStart(2, '0')) +30;
+// 	var mm = 0+String(parseInt(String(today.getMonth() + 1).padStart(2, '0'))-1);
+// }
 
 
 var yyyy = today.getFullYear();
