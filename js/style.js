@@ -169,7 +169,7 @@ document.getElementById("demo").style.visibility = "hidden";
     }
   };
   
-  xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://data.thejeshgn.com/covid19/_design/india/_view/incidents?descending=false&nounce=2020040310", true);
+  xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://data.thejeshgn.com/covid19/_design/india/_view/incidents?descending=false&nounce="+yyyy+mm+dd, true);
   xhttp.send();
 
 
