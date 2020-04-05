@@ -3,7 +3,7 @@ var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(
 console.log(today.getHours())
 
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-if (today.getHours() >= 11 && today.getHours() <=23 )
+if (today.getHours() >= 13 && today.getHours() <=23 )
 {
 var dd = 0+String(parseInt(String(today.getDate()).padStart(2, '0')));
 }
