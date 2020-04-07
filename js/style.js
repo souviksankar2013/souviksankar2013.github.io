@@ -1,6 +1,7 @@
 var today = new Date();
 var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-console.log(today.getHours())
+var hour = String(today.getHours())
+console.log(hour)
 
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 if (today.getHours() >= 11 && today.getHours() <=23 )
@@ -169,10 +170,11 @@ document.getElementById("demo").style.visibility = "hidden";
     }
   };
   
-  xhttp.open("GET", "https://api.allorigins.win/raw?url=https://data.thejeshgn.com/covid19/_design/india/_view/incidents?descending=false&nounce="+yyyy+mm+dd, true);
+  var url = "https://cors-anywhere.herokuapp.com/https://data.thejeshgn.com/covid19/_design/india/_view/incidents?descending=false&nounce="+yyyy+mm+dd+hour
+  xhttp.open("GET", url , true);
   xhttp.send();
 
-
+console.log(url)
 
 
 
@@ -452,7 +454,7 @@ if (currentZoom < 7)
 
 
 
-	  }, 5000);
+	  }, 7000);
 
 
 
