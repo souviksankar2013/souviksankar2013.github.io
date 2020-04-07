@@ -202,10 +202,10 @@ function getColor(d) {
 }
 
 function getColor1(d) {
-    return d >= 0 && d <5 ? '#DC143C' :
-           d > 5 && d < 10  ? '#800026' :
-           d > 10 && d<15 ? '#8b0023' :
-		   d > 15 ? '#000000' :
+    return d >= 0 && d <10 ? '#DC143C' :
+           d > 10 && d < 20  ? '#800026' :
+           d > 21 && d<50 ? '#8b0023' :
+		   d > 51 ? '#000000' :
            
                       '#000000';
 }
@@ -233,9 +233,9 @@ var legend1 = L.control({ position: "bottomleft" });
 legend1.onAdd = function(map) {
   var div = L.DomUtil.create("div", "legend");
   div.innerHTML += "<h4>Total Confirmed</h4>";
-  div.innerHTML += '<i style="background:#000000"></i><span>20+</span><br>';
-  div.innerHTML += '<i style="background: #800026"></i><span>5-20</span><br>';
-  div.innerHTML += '<i style="background: #DC143C"></i><span>0-5</span><br>';
+  div.innerHTML += '<i style="background:#000000"></i><span>50+</span><br>';
+  div.innerHTML += '<i style="background: #800026"></i><span>10-50</span><br>';
+  div.innerHTML += '<i style="background: #DC143C"></i><span>0-10</span><br>';
   div.innerHTML += '<i style="background: #0000FF"></i><span>No patient</span><br>';
   //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
   //div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
@@ -293,10 +293,10 @@ setTimeout(function(){
 		if(arr27[i] == feature.properties.dtname)
 			{
 
-				if (arr28[i] > 20) color = "#000000";
-				else if (arr28[i] > 10 && arr28[i] <= 20 ) color = "#8b0023";
-				else if (arr28[i] > 5 && arr28[i] <= 10) color = "#800026";
-				else if (arr28[i] >= 1 && arr28[i] <= 5) color = "#DC143C";
+				if (arr28[i] > 50) color = "#000000";
+				else if (arr28[i] > 20 && arr28[i] <= 50 ) color = "#8b0023";
+				else if (arr28[i] > 10 && arr28[i] <= 20) color = "#800026";
+				else if (arr28[i] >= 1 && arr28[i] <= 10) color = "#DC143C";
 				else {color = "#feebe2";}
 
 				return {
