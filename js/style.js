@@ -3,7 +3,7 @@ var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(
 console.log(today.getHours())
 
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-if (today.getHours() >= 13 && today.getHours() <=23 )
+if (today.getHours() >= 11 && today.getHours() <=23 )
 {
 var dd = 0+String(parseInt(String(today.getDate()).padStart(2, '0')));
 }
@@ -169,7 +169,7 @@ document.getElementById("demo").style.visibility = "hidden";
     }
   };
   
-  xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://data.thejeshgn.com/covid19/_design/india/_view/incidents?descending=false&nounce="+yyyy+mm+dd, true);
+  xhttp.open("GET", "https://api.allorigins.win/raw?url=https://data.thejeshgn.com/covid19/_design/india/_view/incidents?descending=false&nounce="+yyyy+mm+dd, true);
   xhttp.send();
 
 
@@ -193,10 +193,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 function getColor(d) {
-    return d >= 0 && d <=20 ? '#DC143C' :
-           d > 20 && d <= 100  ? '#800026' :
-           d > 100 && d<=200 ? '#8b0023' :
-		   d > 200 ? '#000000' :
+    return d >= 0 && d <=100 ? '#DC143C' :
+           d > 100 && d <= 200  ? '#800026' :
+           d > 200 && d<=500 ? '#8b0023' :
+		   d > 500 ? '#000000' :
            
                       '#000000';
 }
@@ -252,9 +252,9 @@ var legend = L.control({ position: "bottomleft" });
 legend.onAdd = function(map) {
   var div = L.DomUtil.create("div", "legend");
   div.innerHTML += "<h4>Total Confirmed</h4>";
-  div.innerHTML += '<i style="background:#000000"></i><span>200+</span><br>';
-  div.innerHTML += '<i style="background: #800026"></i><span>20-200</span><br>';
-  div.innerHTML += '<i style="background: #DC143C"></i><span>0-20</span><br>';
+  div.innerHTML += '<i style="background:#000000"></i><span>500+</span><br>';
+  div.innerHTML += '<i style="background: #800026"></i><span>100-500</span><br>';
+  div.innerHTML += '<i style="background: #DC143C"></i><span>0-100</span><br>';
   div.innerHTML += '<i style="background: #0000FF"></i><span>No patient</span><br>';
   //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
   //div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
@@ -452,7 +452,7 @@ if (currentZoom < 7)
 
 
 
-	  }, 7000);
+	  }, 5000);
 
 
 
