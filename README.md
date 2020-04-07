@@ -7,5 +7,6 @@ District data is taken from public google sheet https://docs.google.com/spreadsh
 
 Chart made by Fourish Chart. 
 
-I am Souvik Sankar Mitra. M.Tech Geoinformatics in Indian Institute of Remote Sensing. I have a B.Tech in Computer Science & Engineering. 
+I am Souvik Sankar Mitra. M.Tech Geoinformatics in Indian Institute of Remote Sensing. I have a B.Tech in Computer Science & Engineering.
+Mail = souviksankar2013@gmail.com
 # souviksankar2013.github.io
