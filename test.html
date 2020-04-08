@@ -22,7 +22,7 @@
 <title>Untitled Document</title>
 
 <style>
-  #map{ height: 630px
+  #map{ height: 600px
 	 }
    @keyframes fade { 
   from { opacity: 0.5; } 
@@ -36,8 +36,9 @@
 
 <body>
   <div align="center">
-  <button id="button1" onclick="loc1()">Get Your Nearest Hospital</button>
+  <button id="button1" onclick="loc1()"><h3>Get Your Nearest Hospital</h3></button>
   </div>
+  
   
 	<div id="map"></div>
 
@@ -181,12 +182,12 @@ console.log(latlng.lng)
 
   button.disabled = true
 
-//   L.Routing.control({
-//   waypoints: [
-//     L.latLng(latlng),
-//     L.latLng(closestlayer.latlng)
-//   ]
-// }).addTo(map);
+  L.Routing.control({
+  waypoints: [
+    L.latLng(latlng),
+    L.latLng(closestlayer.latlng)
+  ]
+}).addTo(map);
 
 
 
