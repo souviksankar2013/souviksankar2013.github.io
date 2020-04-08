@@ -2,79 +2,206 @@
 <html>
 <head>
 <meta charset="utf-8">
+<!-- <link rel="stylesheet" href="leaflet/leaflet.css"/> 
+<script src="leaflet/leaflet.js"></script> -->
+<link rel="stylesheet" href="css/style.css"/> 
+
+<!-- <script src="leaflet/leaflet.js"></script> -->
+
+<!-- <script src="https://raw.githubusercontent.com/mapbox/leaflet-knn/master/leaflet-knn.js"></script> -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.js"></script>
+
+
+
+<script src="https://npmcdn.com/leaflet-geometryutil"></script>
+<script src="hospi.js"></script>
 <title>Untitled Document</title>
+
+<style>
+  #map{ height: 630px
+	 }
+   @keyframes fade { 
+  from { opacity: 0.5; } 
+}
+
+.blinking {
+  animation: fade 0.3s infinite alternate;
+}
+</style>
 </head>
 
 <body>
-<div id="demo"> </div>
-<div id="demo1"> </div>
-<div id="demo2"> </div>
-<div id="demo3"> </div>
-<div id="demo4"> </div>
-<div id="demo5"> </div>
+  <div align="center">
+  <button id="button1" onclick="loc1()">Get Your Nearest Hospital</button>
+  </div>
+  
+	<div id="map"></div>
 
 
 <script>
-var today = new Date();
-var dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-var yyyy = today.getFullYear();
+// var today = new Date();
+// var dd = String(today.getDate()).padStart(2, '0');
+// var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+// var yyyy = today.getFullYear();
 
-today = yyyy + '-' + mm + '-' + dd;
-console.log(today);
-var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      //document.getElementById("demo").innerHTML =
-      //this.responseText;
-	  arr=[]
-	  arr2=[]
-	  arr3=[]
-	  arr4=[]
-	  arr5=[]
-	  arr6=[]
-	  var res = this.responseText;
-	  var obj = JSON.parse(res);
+// today = yyyy + '-' + mm + '-' + dd;
+// console.log(today);
+// var xhttp = new XMLHttpRequest();
+//   xhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//       //document.getElementById("demo").innerHTML =
+//       //this.responseText;
+// 	  arr=[]
+// 	  arr2=[]
+// 	  arr3=[]
+// 	  arr4=[]
+// 	  arr5=[]
+// 	  arr6=[]
+// 	  var res = this.responseText;
+// 	  var obj = JSON.parse(res);
 	  
-	  for (var i in res)
-	  {
-		  if(JSON.stringify(obj.rows[i]))
-		  {
-	  arr.push(obj.rows[i])
-		  }
-	  }
+// 	  for (var i in res)
+// 	  {
+// 		  if(JSON.stringify(obj.rows[i]))
+// 		  {
+// 	  arr.push(obj.rows[i])
+// 		  }
+// 	  }
 	  
-	  //document.getElementById("demo").innerHTML =JSON.stringify(arr[arr.length-1])
-	  for (var j in arr)
-	  {
-		  if (JSON.stringify(arr[j].value.report_time).includes (today))
-		  {
-		arr2.push (JSON.stringify(arr[j].value.state))
-		arr3.push (JSON.stringify(arr[j].value.confirmed_india))
-		arr4.push (JSON.stringify(arr[j].value.confirmed_foreign))
-		arr5.push (JSON.stringify(arr[j].value.cured))
-		arr6.push (JSON.stringify(arr[j].value.death))
-		  }
+// 	  //document.getElementById("demo").innerHTML =JSON.stringify(arr[arr.length-1])
+// 	  for (var j in arr)
+// 	  {
+// 		  if (JSON.stringify(arr[j].value.report_time).includes (today))
+// 		  {
+// 		arr2.push (JSON.stringify(arr[j].value.state))
+// 		arr3.push (JSON.stringify(arr[j].value.confirmed_india))
+// 		arr4.push (JSON.stringify(arr[j].value.confirmed_foreign))
+// 		arr5.push (JSON.stringify(arr[j].value.cured))
+// 		arr6.push (JSON.stringify(arr[j].value.death))
+// 		  }
 		
-		//document.getElementById("demo1").innerHTML = JSON.stringify(arr[j].value);
-	  }
-	  //function checkAdult() {
-  	//return "up";
-		//}
+// 		//document.getElementById("demo1").innerHTML = JSON.stringify(arr[j].value);
+// 	  }
+// 	  //function checkAdult() {
+//   	//return "up";
+// 		//}
 		
 	
 	  
-	  //document.getElementById("demo").innerHTML = arr2.findIndex(checkAdult);
-	  document.getElementById("demo").innerHTML = arr2.reverse();
-	  document.getElementById("demo2").innerHTML = arr3.reverse();
-	  document.getElementById("demo3").innerHTML = arr4.reverse();
-	  document.getElementById("demo4").innerHTML = arr5.reverse();
-	  document.getElementById("demo5").innerHTML = arr6.reverse();
+// 	  //document.getElementById("demo").innerHTML = arr2.findIndex(checkAdult);
+// 	  document.getElementById("demo").innerHTML = arr2.reverse();
+// 	  document.getElementById("demo2").innerHTML = arr3.reverse();
+// 	  document.getElementById("demo3").innerHTML = arr4.reverse();
+// 	  document.getElementById("demo4").innerHTML = arr5.reverse();
+// 	  document.getElementById("demo5").innerHTML = arr6.reverse();
 	  
-    }
-  };
-  xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://data.thejeshgn.com/covid19/_design/india/_view/incidents", true);
-  xhttp.send();
+//     }
+//   };
+//   xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://data.thejeshgn.com/covid19/_design/india/_view/incidents", true);
+//   xhttp.send();
+
+const button = document.querySelector('button')
+var map = L.map('map').setView([23.076748, 78.292226 ], 5);
+
+var greenIcon = L.icon({
+    iconUrl: 'hos_image.jpg',
+    shadowUrl: 'hos_image.jpg',
+
+    iconSize:     [25, 25], // size of the icon
+    shadowSize:   [25, 25], // size of the shadow
+    // iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    // shadowAnchor: [4, 62],  // the same for the shadow
+    // popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+var greenIcon1 = L.icon({
+    iconUrl: 'hos_image.jpg',
+    shadowUrl: 'hos_image.jpg',
+    
+
+    iconSize:     [30, 30], // size of the icon
+    shadowSize:   [30, 30], 
+    className: 'blinking' // size of the shadow
+    // iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    // shadowAnchor: [4, 62],  // the same for the shadow
+    // popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'pk.eyJ1IjoiYmJyb29rMTU0IiwiYSI6ImNpcXN3dnJrdDAwMGNmd250bjhvZXpnbWsifQ.Nf9Zkfchos577IanoKMoYQ'
+  }).addTo(map);
+
+
+var hos1 =  L.geoJson(hos,{pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {icon: greenIcon});
+    },
+    onEachFeature: function (feature, layer) {
+  
+  layer.bindPopup(feature.properties.label)
+}}
+  
+  
+  
+  ).addTo(map);
+
+  function loc1()
+  {
+
+  var arr1 = hos1.getLayers().map(l => l.feature.geometry.coordinates)
+
+  navigator.geolocation.getCurrentPosition(function(location) {
+  var latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
+
+  var zoom = 12;
+console.log(latlng.lng)
+
+  var closestlayer = L.GeometryUtil.closestLayer(map,hos1.getLayers(), latlng);
+  // console.log(closestMarker)
+  console.log(closestlayer.distance)
+  
+  var marker = L.marker(latlng).addTo(map);
+
+  //var mark1 = L.marker(closestlayer,{icon:greenIcon1}).addTo(map);
+
+  //closestlayer.setIcon(greenIcon1);
+
+  var marker1 = L.marker(closestlayer.latlng,{icon:greenIcon1}).addTo(map);
+
+  marker1.bindPopup(closestlayer.layer.feature.properties.label).openPopup();
+  
+
+  map.setView(latlng, zoom);
+
+  button.disabled = true
+
+//   L.Routing.control({
+//   waypoints: [
+//     L.latLng(latlng),
+//     L.latLng(closestlayer.latlng)
+//   ]
+// }).addTo(map);
+
+
+
+
+});
+  }
+
+
+// var marker = L.marker([50.84673, 4.35247]).addTo(map);
+// var popup = marker.bindPopup('<b>Hello world!</b><br />I am a popup.');
+// popup.openPopup();
+
+
+
+
+
   </script>
 </body>
 </html>
