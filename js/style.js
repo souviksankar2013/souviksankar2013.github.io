@@ -149,6 +149,25 @@ var xhttp = new XMLHttpRequest();
 	  //function checkAdult() {
   	//return "up";
 		//}
+
+
+		var diff1=[]
+		var diff2=[]
+		var diff3=[]
+
+		for (var k in arr3)
+		{
+			diff1.push(arr3[k] - pre_arr3[k])
+			diff2.push(arr5[k] - pre_arr5[k])
+			diff3.push(arr6[k] - pre_arr6[k])
+		}
+
+		document.getElementById("demo11").innerHTML = diff1
+		document.getElementById("demo12").innerHTML = diff2
+		document.getElementById("demo13").innerHTML = diff3
+		document.getElementById("demo11").style.visibility = "hidden";
+		document.getElementById("demo12").style.visibility = "hidden";
+		document.getElementById("demo13").style.visibility = "hidden";
 		
 document.getElementById("demo").style.visibility = "hidden";
 	document.getElementById("demo2").style.visibility = "hidden";
@@ -400,7 +419,7 @@ function style1(feature)
 			
 			if(arr27[i] == feature.properties.dtname)
 			{
-       layer.bindPopup("<p>State: "+ feature.properties.stname +" <br> District :" + feature.properties.dtname +" <br> Confirmed :" + arr28[i] + "<br> Discharged " + arr29[i] + "<br> Death: " + arr30[i] + "<br> Active: " + arr31[i] + "<br></p>")}}}
+       layer.bindPopup("<p>State: "+ feature.properties.stname +" <br> District :" + feature.properties.dtname +" <br> Confirmed :" + arr28[i] +"<br> Discharged " + arr29[i] + "<br> Death: " + arr30[i] + "<br> Active: " + arr31[i] + "<br></p>")}}}
 });
 
 var state1 = L.geoJson(geoStates,{
@@ -443,17 +462,29 @@ if (currentZoom >= 7)
 
 
 setTimeout(function(){
+
+	
+
 	var arr7=document.getElementById("demo").innerHTML;
 	
 	var arr8=document.getElementById("demo2").innerHTML;
 	//var arr9=document.getElementById("demo3").innerHTML;
 	var arr10=document.getElementById("demo4").innerHTML;
 	var arr11=document.getElementById("demo5").innerHTML;
+
+	var arr91 = document.getElementById("demo11").innerHTML;
+	var arr92 = document.getElementById("demo12").innerHTML;
+	var arr93 = document.getElementById("demo13").innerHTML;
+
+
 	arr7=arr7.split(",");
 	arr8=arr8.split(",");
 	//arr9=arr9.split(",");
 	arr10=arr10.split(",");
 	arr11=arr11.split(",");
+	arr91 = arr91.split(",")
+	arr92 = arr92.split(",")
+	arr93 = arr93.split(",")
 	
 	function style(feature) {
 		for (var i in arr7)
@@ -486,7 +517,7 @@ setTimeout(function(){
 			
 			if(arr7[i] == feature.properties.st_code)
 			{
-       layer.bindPopup("<p>"+ feature.properties.S_NAME +" <br> Confirmed :" + arr8[i] + "<br> Cured " + arr10[i] + "<br> Death " + arr11[i] + "<br></p>")}}}
+       layer.bindPopup("<p>"+ feature.properties.S_NAME +" <br> Confirmed :" + arr8[i] +" (+"+arr91[i]+ ")<br> Cured " + arr10[i] +" (+"+arr92[i]+ ")<br> Death " + arr11[i] +" (+"+arr93[i]+ ")<br></p>")}}}
 }).addTo(map);
 
 
