@@ -252,9 +252,11 @@ document.getElementById("demo").style.visibility = "hidden";
 
 console.log(url)
 
+$(document).ready(function () {
+    setTimeout(function(){
+      $(".loader-wrapper").fadeOut("slow");  
 
-
-  var map = L.map('map').setView([23.076748, 78.292226 ], 5);
+var map = L.map('map').setView([23.076748, 78.292226 ], 5);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -451,7 +453,7 @@ if (currentZoom >= 7)
 });
 
 		
-	  }, 15000);
+	  }, 10000);
 
 
 
@@ -542,7 +544,7 @@ if (currentZoom < 7)
 
 
 
-	  }, 7000);
+	  }, 2000);
 
 
 
@@ -610,3 +612,12 @@ if (currentZoom < 7)
 //         state.addTo(map)
 //     }
 // }
+
+
+
+
+    }, 5000);
+});
+
+
+  
