@@ -4,14 +4,25 @@ var hour = String(today.getHours())
 console.log(hour)
 
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-if (today.getHours() >= 11 && today.getHours() <=23 )
+if (today.getHours() >= 11 && today.getHours() <=23)
 {
+	if (dd<=9)
 var dd = 0+String(parseInt(String(today.getDate()).padStart(2, '0')));
+
+else
+
+	var dd = String(parseInt(String(today.getDate()).padStart(2, '0')));
+
 }
 else
 {
+	if(dd<=9)
 	
 var dd =  0+String(parseInt(String(today.getDate()).padStart(2, '0')) -1);
+
+else
+var dd =  String(parseInt(String(today.getDate()).padStart(2, '0')) -1);
+
 }
 // else 
 // {
@@ -23,7 +34,8 @@ var dd =  0+String(parseInt(String(today.getDate()).padStart(2, '0')) -1);
 var yyyy = today.getFullYear();
 
 today = yyyy + '-' + mm + '-' + dd;
-console.log(today);
+yesterday = yyyy + '-' + mm + '-' + 0+String((dd-1));
+console.log(yesterday);
 
 arr=[]
 	  arr2=[]
@@ -38,6 +50,11 @@ arr18=[]
 arr19=[]
 arr20=[]
 arr21=[]
+
+pre_arr3 =[]
+pre_arr4=[]
+pre_arr5=[]
+pre_arr6=[]
 
 
 
@@ -109,6 +126,22 @@ var xhttp = new XMLHttpRequest();
 		arr6.push (JSON.stringify(arr[j].value.death))
 		document.getElementById("date").innerHTML = "<h4>Updated till: " +arr[j].value.report_time.split("T") + "</h4><p>Zoom the map to get district level data </p>";
 		  }
+
+
+
+		  if (JSON.stringify(arr[j].value.report_time).includes (yesterday))
+		  {
+		//arr2.push (JSON.stringify(arr[j].value.state).replace(/^"(.*)"$/, '$1'))
+		// arr3.push (JSON.stringify(arr[j].value.confirmed_india))
+		pre_arr3.push (JSON.stringify(arr[j].value.confirmed))
+		pre_arr4.push (JSON.stringify(arr[j].value.report_time))
+		//console.log(JSON.stringify(arr[j].value.cured))
+		pre_arr5.push (JSON.stringify(arr[j].value.cured))
+		pre_arr6.push (JSON.stringify(arr[j].value.death))
+		
+		  }
+
+		 
 		  
 		
 		//document.getElementById("demo1").innerHTML = JSON.stringify(arr[j].value);
@@ -136,6 +169,11 @@ document.getElementById("demo").style.visibility = "hidden";
 		//console.log(arr4)
 	  //document.getElementById("demo6").innerHTML = "<h2>Confirmed Total: "+sum+"</h2";
 	  //document.getElementById("demo3").innerHTML = arr4;
+
+	var pre_sum = 0
+	var pre_sum1=0
+	var pre_sum2=0
+
 	  var sum = 0
 	  var sum1=0
 	  var sum2=0
@@ -143,13 +181,17 @@ document.getElementById("demo").style.visibility = "hidden";
 	  if ([... new Set(arr4)].length > 1)
 	  {
 		  var tim = [... new Set(arr4)][1]
+		  
+		  var tim1 = [... new Set(arr4)][0]
+
+		  
 	  }
 	  else
 	  {
 		var tim = [... new Set(arr4)][0]
 	  }
 
-		for (var i in arr3)
+	for (var i in arr3)
 		{
 			if (arr4[i] == tim)
 			{
@@ -157,11 +199,26 @@ document.getElementById("demo").style.visibility = "hidden";
 			sum1 = sum1 + parseInt(arr5[i])
 			sum2 = sum2 + parseInt(arr6[i])
 			}
-		}
+		}	
+
+		for (var i in pre_arr3)
+		{
+			if (pre_arr4[i] == [... new Set(pre_arr4)][1])
+			{
+			pre_sum = pre_sum + parseInt(pre_arr3[i])
+			pre_sum1 = pre_sum1 + parseInt(pre_arr5[i])
+			pre_sum2 = pre_sum2 + parseInt(pre_arr6[i])
+			}
+		}	
+
+		console.log(pre_sum)
+
+
+		
 
 		console.log([... new Set(arr4)].length)
 
-		document.getElementById("demo3").innerHTML = "<h3>Total Confirmed: "+sum + "&nbsp&nbsp&nbspTotal Cured: "+sum1+"&nbsp&nbsp&nbspTotal Death: "+sum2+"</h3>";
+		document.getElementById("demo3").innerHTML = "<h3>Total Confirmed: "+sum+" (+"+(sum - pre_sum)+")&nbsp&nbsp&nbspTotal Cured: "+sum1+" (+"+(sum1 - pre_sum1)+")&nbsp&nbsp&nbspTotal Death: "+sum2+" (+"+(sum2 - pre_sum2)+")</h3>";
 
 	  document.getElementById("demo4").innerHTML = arr5;
 	  document.getElementById("demo5").innerHTML = arr6;
@@ -170,7 +227,7 @@ document.getElementById("demo").style.visibility = "hidden";
     }
   };
   
-  var url = "https://cors-anywhere.herokuapp.com/https://data.thejeshgn.com/covid19/_design/india/_view/incidents?descending=false&nounce="+yyyy+mm+dd+hour
+  var url = "https://api.allorigins.win/raw?url=https://data.thejeshgn.com/covid19/_design/india/_view/incidents?descending=false&nounce="+yyyy+mm+dd+hour
   xhttp.open("GET", url , true);
   xhttp.send();
 
