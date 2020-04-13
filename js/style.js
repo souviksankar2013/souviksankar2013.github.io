@@ -4,7 +4,7 @@ var hour = String(today.getHours())
 console.log(hour)
 
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-if (today.getHours() >= 11 && today.getHours() <=23)
+if (today.getHours() >= 17 && today.getHours() <=23)
 {
 	if (dd<=9)
 var dd = 0+String(parseInt(String(today.getDate()).padStart(2, '0')));
@@ -274,9 +274,9 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 function getColor(d) {
     return d >= 0 && d <=100 ? '#DC143C' :
-           d > 100 && d <= 200  ? '#800026' :
-           d > 200 && d<=500 ? '#8b0023' :
-		   d > 500 ? '#000000' :
+           d > 100 && d <= 500  ? '#800026' :
+           d > 500 && d<=1500 ? '#8b0023' :
+		   d > 1500 ? '#000000' :
            
                       '#000000';
 }
@@ -332,8 +332,8 @@ var legend = L.control({ position: "bottomleft" });
 legend.onAdd = function(map) {
   var div = L.DomUtil.create("div", "legend");
   div.innerHTML += "<h4>Total Confirmed</h4>";
-  div.innerHTML += '<i style="background:#000000"></i><span>500+</span><br>';
-  div.innerHTML += '<i style="background: #800026"></i><span>100-500</span><br>';
+  div.innerHTML += '<i style="background:#000000"></i><span>1500+</span><br>';
+  div.innerHTML += '<i style="background: #800026"></i><span>100-1500</span><br>';
   div.innerHTML += '<i style="background: #DC143C"></i><span>0-100</span><br>';
   div.innerHTML += '<i style="background: #0000FF"></i><span>No patient</span><br>';
   //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
