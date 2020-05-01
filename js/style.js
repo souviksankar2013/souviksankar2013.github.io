@@ -23,6 +23,7 @@ var dd =  0+String(parseInt(String(today.getDate()).padStart(2, '0')) -1);
 else
 var dd =  String(parseInt(String(today.getDate()).padStart(2, '0')) -1);
 
+
 }
 // else 
 // {
@@ -33,9 +34,9 @@ var dd =  String(parseInt(String(today.getDate()).padStart(2, '0')) -1);
 
 var yyyy = today.getFullYear();
 
-today = yyyy + '-' + mm + '-' + dd;
-yesterday = yyyy + '-' + mm + '-' + String((dd-1));
-console.log(yesterday);
+today = yyyy + '-' + mm + '-' + String((dd+1));
+yesterday = yyyy + '-' + mm + '-' + String((dd+1));
+console.log(today);
 
 arr=[]
 	  arr2=[]

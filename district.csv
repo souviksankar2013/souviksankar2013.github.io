@@ -1,0 +1,729 @@
+dt_code,dtname,stname,st_code,year,Zone
+638,Nicobars,ANDAMAN & NICOBAR,35,2011_c,Green Zone
+639,North  & Middle Andaman,ANDAMAN & NICOBAR,35,2011_c,Green Zone
+640,South Andaman,ANDAMAN & NICOBAR,35,2011_c,Red Zone
+553,Anantapur,ANDHRA PRADESH,37,2011_c,Orange Zone
+554,Chittoor,ANDHRA PRADESH,37,2011_c,Red Zone
+545,East Godavari,ANDHRA PRADESH,37,2011_c,Orange Zone
+548,Guntur,ANDHRA PRADESH,37,2011_c,Red Zone
+547,Krishna,ANDHRA PRADESH,37,2011_c,Red Zone
+552,Kurnool,ANDHRA PRADESH,37,2011_c,Red Zone
+549,Prakasam,ANDHRA PRADESH,37,2011_c,Orange Zone
+550,S.P.S. Nellore,ANDHRA PRADESH,37,2011_c,Red Zone
+542,Srikakulam,ANDHRA PRADESH,37,2011_c,Orange Zone
+544,Visakhapatnam,ANDHRA PRADESH,37,2011_c,Orange Zone
+543,Vizianagaram,ANDHRA PRADESH,37,2011_c,Green Zone
+546,West Godavari,ANDHRA PRADESH,37,2011_c,Orange Zone
+551,Y.S.R.,ANDHRA PRADESH,37,2011_c,Orange Zone
+260,Anjaw,ARUNACHAL PRADESH,12,2011_c,Green Zone
+253,Changlang,ARUNACHAL PRADESH,12,2011_c,Green Zone
+247,East Kameng,ARUNACHAL PRADESH,12,2011_c,Green Zone
+251,East Siang,ARUNACHAL PRADESH,12,2011_c,Green Zone
+778,Kamle,ARUNACHAL PRADESH,12,2018,Green Zone
+763,Kra Daadi,ARUNACHAL PRADESH,12,2015_c,Green Zone
+256,Kurung Kumey,ARUNACHAL PRADESH,12,2011_c,Green Zone
+784,Lepa Rada,ARUNACHAL PRADESH,12,2018,Green Zone
+259,Lohit,ARUNACHAL PRADESH,12,2011_c,Green Zone
+761,Longding,ARUNACHAL PRADESH,12,2012_c,Green Zone
+258,Lower Dibang Valley,ARUNACHAL PRADESH,12,2011_c,Green Zone
+779,Lower Siang,ARUNACHAL PRADESH,12,2018,Green Zone
+255,Lower Subansiri,ARUNACHAL PRADESH,12,2011_c,Green Zone
+762,Namsai,ARUNACHAL PRADESH,12,2014_c,Green Zone
+783,Pakke Kessang,ARUNACHAL PRADESH,12,2018,Green Zone
+248,Papum Pare,ARUNACHAL PRADESH,12,2011_c,Green Zone
+785,Shi Yomi,ARUNACHAL PRADESH,12,2018,Green Zone
+764,Siang,ARUNACHAL PRADESH,12,2015_c,Green Zone
+245,Tawang,ARUNACHAL PRADESH,12,2011_c,Green Zone
+254,Tirap,ARUNACHAL PRADESH,12,2011_c,Green Zone
+257,Upper Dibang Valley,ARUNACHAL PRADESH,12,2011_c,Green Zone
+252,Upper Siang,ARUNACHAL PRADESH,12,2011_c,Green Zone
+249,Upper Subansiri,ARUNACHAL PRADESH,12,2011_c,Green Zone
+246,West Kameng,ARUNACHAL PRADESH,12,2011_c,Green Zone
+250,West Siang,ARUNACHAL PRADESH,12,2011_c,Green Zone
+324,Baksa,ASSAM,18,2011_c,Green Zone
+303,Barpeta,ASSAM,18,2011_c,Green Zone
+756,Biswanath,ASSAM,18,2015_c,Green Zone
+319,Bongaigaon,ASSAM,18,2011_c,Green Zone
+316,Cachar,ASSAM,18,2011_c,Green Zone
+755,Charaideo,ASSAM,18,2015_c,Green Zone
+320,Chirang,ASSAM,18,2011_c,Green Zone
+325,Darrang,ASSAM,18,2011_c,Green Zone
+308,Dhemaji,ASSAM,18,2011_c,Green Zone
+301,Dhubri,ASSAM,18,2011_c,Orange Zone
+310,Dibrugarh,ASSAM,18,2011_c,Green Zone
+315,Dima Hasao,ASSAM,18,2011_c,Green Zone
+302,Goalpara,ASSAM,18,2011_c,Orange Zone
+313,Golaghat,ASSAM,18,2011_c,Green Zone
+318,Hailakandi,ASSAM,18,2011_c,Green Zone
+757,Hojai,ASSAM,18,2015_c,Green Zone
+312,Jorhat,ASSAM,18,2011_c,Green Zone
+321,Kamrup,ASSAM,18,2011_c,Green Zone
+322,Kamrup Metropolitan,ASSAM,18,2011_c,Green Zone
+314,Karbi Anglong,ASSAM,18,2011_c,Green Zone
+317,Karimganj,ASSAM,18,2011_c,Green Zone
+300,Kokrajhar,ASSAM,18,2011_c,Green Zone
+307,Lakhimpur,ASSAM,18,2011_c,Green Zone
+760,Majuli,ASSAM,18,2016_c,Green Zone
+304,Morigaon,ASSAM,18,2011_c,Orange Zone
+305,Nagaon,ASSAM,18,2011_c,Green Zone
+323,Nalbari,ASSAM,18,2011_c,Green Zone
+311,Sivasagar,ASSAM,18,2011_c,Green Zone
+306,Sonitpur,ASSAM,18,2011_c,Green Zone
+758,South Salmara Mancachar,ASSAM,18,2015_c,Green Zone
+309,Tinsukia,ASSAM,18,2011_c,Green Zone
+326,Udalguri,ASSAM,18,2011_c,Green Zone
+759,West Karbi Anglong,ASSAM,18,2016_c,Green Zone
+209,Araria,BIHAR,10,2011_c,Green Zone
+240,Arwal,BIHAR,10,2011_c,Orange Zone
+235,Aurangabad,BIHAR,10,2011_c,Orange Zone
+225,Banka,BIHAR,10,2011_c,Orange Zone
+222,Begusarai,BIHAR,10,2011_c,Orange Zone
+224,Bhagalpur,BIHAR,10,2011_c,Orange Zone
+231,Bhojpur,BIHAR,10,2011_c,Orange Zone
+232,Buxar,BIHAR,10,2011_c,Red Zone
+215,Darbhanga,BIHAR,10,2011_c,Orange Zone
+236,Gaya,BIHAR,10,2011_c,Red Zone
+217,Gopalganj,BIHAR,10,2011_c,Orange Zone
+238,Jamui,BIHAR,10,2011_c,Green Zone
+239,Jehanabad,BIHAR,10,2011_c,Orange Zone
+233,Kaimur (bhabua),BIHAR,10,2011_c,Orange Zone
+212,Katihar,BIHAR,10,2011_c,Green Zone
+223,Khagaria,BIHAR,10,2011_c,Green Zone
+210,Kishanganj,BIHAR,10,2011_c,Green Zone
+227,Lakhisarai,BIHAR,10,2011_c,Orange Zone
+213,Madhepura,BIHAR,10,2011_c,Orange Zone
+207,Madhubani,BIHAR,10,2011_c,Orange Zone
+226,Munger,BIHAR,10,2011_c,Red Zone
+216,Muzaffarpur,BIHAR,10,2011_c,Green Zone
+229,Nalanda,BIHAR,10,2011_c,Orange Zone
+237,Nawada,BIHAR,10,2011_c,Orange Zone
+203,Pashchim Champaran,BIHAR,10,2011_c,Green Zone
+230,Patna,BIHAR,10,2011_c,Red Zone
+204,Purba Champaran,BIHAR,10,2011_c,Orange Zone
+211,Purnia,BIHAR,10,2011_c,Orange Zone
+234,Rohtas,BIHAR,10,2011_c,Red Zone
+214,Saharsa,BIHAR,10,2011_c,Green Zone
+221,Samastipur,BIHAR,10,2011_c,Green Zone
+219,Saran,BIHAR,10,2011_c,Orange Zone
+228,Sheikhpura,BIHAR,10,2011_c,Green Zone
+205,Sheohar,BIHAR,10,2011_c,Green Zone
+206,Sitamarhi,BIHAR,10,2011_c,Green Zone
+218,Siwan,BIHAR,10,2011_c,Orange Zone
+208,Supaul,BIHAR,10,2011_c,Green Zone
+220,Vaishali,BIHAR,10,2011_c,Orange Zone
+55,Chandigarh,CHANDIGARH,4,2011_c,Red Zone
+719,Balod,CHHATTISGARH,22,update2014,Green Zone
+721,Baloda Bazar,CHHATTISGARH,22,update2014,Green Zone
+716,Balrampur,CHHATTISGARH,22,2011_c,Green Zone
+718,Bametara,CHHATTISGARH,22,update2014,Green Zone
+414,Bastar,CHHATTISGARH,22,2011_c,Green Zone
+417,Bijapur,CHHATTISGARH,22,2011_c,Green Zone
+406,Bilaspur,CHHATTISGARH,22,2011_c,Green Zone
+416,Dakshin Bastar Dantewada,CHHATTISGARH,22,2011_c,Green Zone
+412,Dhamtari,CHHATTISGARH,22,2011_c,Green Zone
+409,Durg,CHHATTISGARH,22,2011_c,Green Zone
+720,Gariaband,CHHATTISGARH,22,update2014,Green Zone
+405,Janjgir - Champa,CHHATTISGARH,22,2011_c,Green Zone
+402,Jashpur,CHHATTISGARH,22,2011_c,Green Zone
+407,Kabeerdham,CHHATTISGARH,22,2011_c,Green Zone
+722,Kondagaon,CHHATTISGARH,22,update2014,Green Zone
+404,Korba,CHHATTISGARH,22,2011_c,Green Zone
+400,Koriya,CHHATTISGARH,22,2011_c,Orange Zone
+411,Mahasamund,CHHATTISGARH,22,2011_c,Green Zone
+717,Mungeli,CHHATTISGARH,22,update2014,Green Zone
+415,Narayanpur,CHHATTISGARH,22,2011_c,Green Zone
+403,Raigarh,CHHATTISGARH,22,2011_c,Green Zone
+410,Raipur,CHHATTISGARH,22,2011_c,Green Zone
+408,Rajnandgaon,CHHATTISGARH,22,2011_c,Red Zone
+723,Sukma,CHHATTISGARH,22,update2014,Green Zone
+715,Surajpur,CHHATTISGARH,22,update2014,Green Zone
+401,Surguja,CHHATTISGARH,22,2011_c,Green Zone
+413,Uttar Bastar Kanker,CHHATTISGARH,22,2011_c,Green Zone
+496,Dadra & Nagar Haveli,DADRA & NAGAR HAVE,26,2011_c,Green Zone
+495,Daman,DAMAN & DIU,25,2011_c,Green Zone
+494,Diu,DAMAN & DIU,25,2011_c,Green Zone
+95,Central Delhi,DELHI,7,2011_c,Red Zone
+93,East Delhi,DELHI,7,2011_c,Red Zone
+94,New Delhi,DELHI,7,2011_c,Red Zone
+91,North Delhi,DELHI,7,2011_c,Red Zone
+92,North East Delhi,DELHI,7,2011_c,Red Zone
+90,North West Delhi,DELHI,7,2011_c,Red Zone
+702,Shahdara,DELHI,7,update2014,Red Zone
+98,South Delhi,DELHI,7,2011_c,Red Zone
+703,South East Delhi,DELHI,7,update2014,Red Zone
+97,South West Delhi,DELHI,7,2011_c,Red Zone
+96,West Delhi,DELHI,7,2011_c,Red Zone
+585,North Goa,GOA,30,2011_c,Green Zone
+586,South Goa,GOA,30,2011_c,Green Zone
+474,Ahmadabad,GUJARAT,24,2011_c,Red Zone
+480,Amreli,GUJARAT,24,2011_c,Green Zone
+482,Anand,GUJARAT,24,2011_c,Red Zone
+725,Aravalli,GUJARAT,24,update2014,Red Zone
+469,Banas Kantha,GUJARAT,24,2011_c,Red Zone
+488,Bharuch,GUJARAT,24,2011_c,Orange Zone
+481,Bhavnagar,GUJARAT,24,2011_c,Red Zone
+726,Botad,GUJARAT,24,update2014,Orange Zone
+726,Botad,GUJARAT,24,update2014,Orange Zone
+731,Chota Udaipur,GUJARAT,24,update2014,Orange Zone
+728,Devbhumi Dwarka,GUJARAT,24,update2014,Green Zone
+485,Dohad,GUJARAT,24,2011_c,Orange Zone
+473,Gandhinagar,GUJARAT,24,2011_c,Red Zone
+729,Gir Somnath,GUJARAT,24,update2014,Orange Zone
+477,Jamnagar,GUJARAT,24,2011_c,Orange Zone
+479,Junagadh,GUJARAT,24,2011_c,Green Zone
+468,Kachchh,GUJARAT,24,2011_c,Orange Zone
+483,Kheda,GUJARAT,24,2011_c,Orange Zone
+471,Mahesana,GUJARAT,24,2011_c,Orange Zone
+730,Mahisagar,GUJARAT,24,update2014,Oranse Zone
+727,Morbi,GUJARAT,24,update2014,Green Zone
+487,Narmada,GUJARAT,24,2011_c,Orange Zone
+490,Navsari,GUJARAT,24,2011_c,Orange Zone
+484,Panch Mahals,GUJARAT,24,2011_c,Red Zone
+470,Patan,GUJARAT,24,2011_c,Orange Zone
+478,Porbandar,GUJARAT,24,2011_c,Green Zone
+476,Rajkot,GUJARAT,24,2011_c,Orange Zone
+472,Sabar Kantha,GUJARAT,24,2011_c,Orange Zone
+492,Surat,GUJARAT,24,2011_c,Red Zone
+475,Surendranagar,GUJARAT,24,2011_c,Orange Zone
+493,Tapi,GUJARAT,24,2011_c,Oranse Zone
+489,The Dangs,GUJARAT,24,2011_c,Orange Zone
+486,Vadodara,GUJARAT,24,2011_c,Red Zone
+491,Valsad,GUJARAT,24,2011_c,Orange Zone
+70,Ambala,HARYANA,6,2011_c,Orange Zone
+81,Bhiwani,HARYANA,6,2011_c,Orange Zone
+765,Charki Dadri,HARYANA,6,2016_c,Orange Zone
+88,Faridabad,HARYANA,6,2011_c,Red Zone
+78,Fatehabad,HARYANA,6,2011_c,Orange Zone
+86,Gurugram,HARYANA,6,2011_c,Orange Zone
+80,Hisar,HARYANA,6,2011_c,Orange Zone
+83,Jhajjar,HARYANA,6,2011_c,Orange Zone
+77,Jind,HARYANA,6,2011_c,Orange Zone
+73,Kaithal,HARYANA,6,2011_c,Orange Zone
+74,Karnal,HARYANA,6,2011_c,Orange Zone
+72,Kurukshetra,HARYANA,6,2011_c,Orange Zone
+84,Mahendragarh,HARYANA,6,2011_c,Green Zone
+87,Nuh,HARYANA,6,2011_c,Orange Zone
+89,Palwal,HARYANA,6,2011_c,Orange Zone
+69,Panchkula,HARYANA,6,2011_c,Orange Zone
+75,Panipat,HARYANA,6,2011_c,Orange Zone
+85,Rewari,HARYANA,6,2011_c,Green Zone
+82,Rohtak,HARYANA,6,2011_c,Orange Zone
+79,Sirsa,HARYANA,6,2011_c,Orange Zone
+76,Sonipat,HARYANA,6,2011_c,Red Zone
+71,Yamunanagar,HARYANA,6,2011_c,Orange Zone
+30,Bilaspur,HIMACHAL PRADESH,2,2011_c,Green Zone
+23,Chamba,HIMACHAL PRADESH,2,2011_c,Oranse Zone
+28,Hamirpur,HIMACHAL PRADESH,2,2011_c,Orange Zone
+24,Kangra,HIMACHAL PRADESH,2,2011_c,Orange Zone
+34,Kinnaur,HIMACHAL PRADESH,2,2011_c,Green Zone
+26,Kullu,HIMACHAL PRADESH,2,2011_c,Green Zone
+25,Lahul & Spiti,HIMACHAL PRADESH,2,2011_c,Green Zone
+27,Mandi,HIMACHAL PRADESH,2,2011_c,Green Zone
+33,Shimla,HIMACHAL PRADESH,2,2011_c,Green Zone
+32,Sirmaur,HIMACHAL PRADESH,2,2011_c,Orange Zone
+31,Solan,HIMACHAL PRADESH,2,2011_c,Oranse Zone
+29,Una,HIMACHAL PRADESH,2,2011_c,Orange Zone
+14,Anantnag,JAMMU & KASHMIR,1,2011_c,Red Zone
+2,Badgam,JAMMU & KASHMIR,1,2011_c,Orange Zone
+9,Bandipore,JAMMU & KASHMIR,1,2011_c,Red Zone
+8,Baramula,JAMMU & KASHMIR,1,2011_c,Orange Zone
+16,Doda,JAMMU & KASHMIR,1,2011_c,Green Zone
+11,Ganderbal,JAMMU & KASHMIR,1,2011_c,Orange Zone
+21,Jammu,JAMMU & KASHMIR,1,2011_c,Orange Zone
+7,Kathua,JAMMU & KASHMIR,1,2011_c,Orange Zone
+18,Kishtwar,JAMMU & KASHMIR,1,2011_c,Green Zone
+15,Kulgam,JAMMU & KASHMIR,1,2011_c,Orange Zone
+1,Kupwara,JAMMU & KASHMIR,1,2011_c,Orange Zone
+991,Mirpur,JAMMU & KASHMIR,1,2011_c,Green Zone
+992,Muzaffarabad,JAMMU & KASHMIR,1,2011_c,Green Zone
+12,Pulwama,JAMMU & KASHMIR,1,2011_c,Green Zone
+5,Punch,JAMMU & KASHMIR,1,2011_c,Green Zone
+6,Rajouri,JAMMU & KASHMIR,1,2011_c,Orange Zone
+17,Ramban,JAMMU & KASHMIR,1,2011_c,Oranse Zone
+20,Reasi,JAMMU & KASHMIR,1,2011_c,Orange Zone
+22,Samba,JAMMU & KASHMIR,1,2011_c,Orange Zone
+13,Shupiyan,JAMMU & KASHMIR,1,2011_c,Red Zone
+10,Srinagar,JAMMU & KASHMIR,1,2011_c,Red Zone
+19,Udhampur,JAMMU & KASHMIR,1,2011_c,Orange Zone
+355,Bokaro,JHARKHAND,20,2011_c,Orange Zone
+347,Chatra,JHARKHAND,20,2011_c,Green Zone
+350,Deoghar,JHARKHAND,20,2011_c,Orange Zone
+354,Dhanbad,JHARKHAND,20,2011_c,Orange Zone
+362,Dumka,JHARKHAND,20,2011_c,Green Zone
+346,Garhwa,JHARKHAND,20,2011_c,Green Zone
+349,Giridih,JHARKHAND,20,2011_c,Orange Zone
+351,Godda,JHARKHAND,20,2011_c,Orange Zone
+366,Gumla,JHARKHAND,20,2011_c,Green Zone
+360,Hazaribagh,JHARKHAND,20,2011_c,Green Zone
+363,Jamtara,JHARKHAND,20,2011_c,Orange Zone
+365,Khunti,JHARKHAND,20,2011_c,Orange Zone
+348,Kodarma,JHARKHAND,20,2011_c,Green Zone
+359,Latehar,JHARKHAND,20,2011_c,Orange Zone
+356,Lohardaga,JHARKHAND,20,2011_c,Green Zone
+353,Pakur,JHARKHAND,20,2011_c,Green Zone
+358,Palamu,JHARKHAND,20,2011_c,Green Zone
+368,Pashchimi Singhbhum,JHARKHAND,20,2011_c,Green Zone
+357,Purbi Singhbhum,JHARKHAND,20,2011_c,Green Zone
+361,Ramgarh,JHARKHAND,20,2011_c,Red Zone
+364,Ranchi,JHARKHAND,20,2011_c,Green Zone
+352,Sahibganj,JHARKHAND,20,2011_c,Green Zone
+369,Saraikela-kharsawan,JHARKHAND,20,2011_c,Orange Zone
+367,Simdega,JHARKHAND,20,2011_c,Green Zone
+556,Bagalkote,KARNATAKA,29,2011_c,Orange Zone
+565,Ballari,KARNATAKA,29,2011_c,Orange Zone
+555,Belagavi,KARNATAKA,29,2011_c,Orange Zone
+572,Bengaluru,KARNATAKA,29,2011_c,Red Zone
+583,Bengaluru Rural,KARNATAKA,29,2011_c,Red Zone
+558,Bidar,KARNATAKA,29,2011_c,Orange Zone
+578,Chamarajanagara,KARNATAKA,29,2011_c,Green Zone
+582,Chikkaballapura,KARNATAKA,29,2011_c,Orange Zone
+570,Chikkamagaluru,KARNATAKA,29,2011_c,Green Zone
+566,Chitradurga,KARNATAKA,29,2011_c,Green Zone
+575,Dakshina Kannada,KARNATAKA,29,2011_c,Orange Zone
+567,Davanagere,KARNATAKA,29,2011_c,Green Zone
+562,Dharwad,KARNATAKA,29,2011_c,Orange Zone
+561,Gadag,KARNATAKA,29,2011_c,Orange Zone
+574,Hassan,KARNATAKA,29,2011_c,Green Zone
+564,Haveri,KARNATAKA,29,2011_c,Green Zone
+579,Kalaburagi,KARNATAKA,29,2011_c,Orange Zone
+576,Kodagu,KARNATAKA,29,2011_c,Green Zone
+581,Kolar,KARNATAKA,29,2011_c,Green Zone
+560,Koppal,KARNATAKA,29,2011_c,Green Zone
+573,Mandya,KARNATAKA,29,2011_c,Orange Zone
+577,Mysuru,KARNATAKA,29,2011_c,Red Zone
+559,Raichur,KARNATAKA,29,2011_c,Green Zone
+584,Ramanagara,KARNATAKA,29,2011_c,Green Zone
+568,Shivamogga,KARNATAKA,29,2011_c,Green Zone
+571,Tumakuru,KARNATAKA,29,2011_c,Orange Zone
+569,Udupi,KARNATAKA,29,2011_c,Green Zone
+563,Uttara Kannada,KARNATAKA,29,2011_c,Orange Zone
+557,Vijayapura,KARNATAKA,29,2011_c,Orange Zone
+580,Yadgir,KARNATAKA,29,2011_c,Green Zone
+598,Alappuzha,KERALA,32,2011_c,Oranee Zone
+595,Ernakulam,KERALA,32,2011_c,Green Zone
+596,Idukki,KERALA,32,2011_c,Red Zone
+589,Kannur,KERALA,32,2011_c,Orange Zone
+588,Kasaragod,KERALA,32,2011_c,Orange Zone
+600,Kollam,KERALA,32,2011_c,Red Zone
+597,Kottayam,KERALA,32,2011_c,Orange Zone
+591,Kozhikode,KERALA,32,2011_c,Orange Zone
+592,Malappuram,KERALA,32,2011_c,Orange Zone
+593,Palakkad,KERALA,32,2011_c,Orange Zone
+599,Pathanamthitta,KERALA,32,2011_c,Orange Zone
+601,Thiruvananthapuram,KERALA,32,2011_c,Orange Zone
+594,Thrissur,KERALA,32,2011_c,Orange Zone
+590,Wayanad,KERALA,32,2011_c,Green Zone
+4,Kargil,LADAKH,38,2011_c,Orange Zone
+3,Leh,LADAKH,38,2011_c,Orange Zone
+587,Lakshadweep,LAKSHADWEEP,31,2011_c,Green Zone
+724,Agar Malwa,MADHYA PRADESH,23,update2014,Orange Zone
+465,Alirajpur,MADHYA PRADESH,23,2011_c,Orange Zone
+461,Anuppur,MADHYA PRADESH,23,2011_c,Green Zone
+459,Ashoknagar,MADHYA PRADESH,23,2011_c,Green Zone
+457,Balaghat,MADHYA PRADESH,23,2011_c,Green Zone
+441,Barwani,MADHYA PRADESH,23,2011_c,Red Zone
+447,Betul,MADHYA PRADESH,23,2011_c,Orange Zone
+420,Bhind,MADHYA PRADESH,23,2011_c,Green Zone
+444,Bhopal,MADHYA PRADESH,23,2011_c,Red Zone
+467,Burhanpur,MADHYA PRADESH,23,2011_c,Orange Zone
+425,Chhatarpur,MADHYA PRADESH,23,2011_c,Green Zone
+455,Chhindwara,MADHYA PRADESH,23,2011_c,Orange Zone
+428,Damoh,MADHYA PRADESH,23,2011_c,Green Zone
+422,Datia,MADHYA PRADESH,23,2011_c,Green Zone
+437,Dewas,MADHYA PRADESH,23,2011_c,Red Zone
+438,Dhar,MADHYA PRADESH,23,2011_c,Red Zone
+453,Dindori,MADHYA PRADESH,23,2011_c,Orange Zone
+466,East Nimar,MADHYA PRADESH,23,2011_c,Red Zone
+458,Guna,MADHYA PRADESH,23,2011_c,Green Zone
+421,Gwalior,MADHYA PRADESH,23,2011_c,Red Zone
+448,Harda,MADHYA PRADESH,23,2011_c,Orange Zone
+449,Hoshangabad,MADHYA PRADESH,23,2011_c,Orange Zone
+439,Indore,MADHYA PRADESH,23,2011_c,Green Zone
+451,Jabalpur,MADHYA PRADESH,23,2011_c,Red Zone
+464,Jhabua,MADHYA PRADESH,23,2011_c,Green Zone
+450,Katni,MADHYA PRADESH,23,2011_c,Orange Zone
+454,Mandla,MADHYA PRADESH,23,2011_c,Red Zone
+433,Mandsaur,MADHYA PRADESH,23,2011_c,Green Zone
+419,Morena,MADHYA PRADESH,23,2011_c,Orange Zone
+452,Narsimhapur,MADHYA PRADESH,23,2011_c,Oranse Zone
+432,Neemuch,MADHYA PRADESH,23,2011_c,Green Zone
+782,Niwari,MADHYA PRADESH,23,2018,Green Zone
+426,Panna,MADHYA PRADESH,23,2011_c,Green Zone
+446,Raisen,MADHYA PRADESH,23,2011_c,Green Zone
+442,Rajgarh,MADHYA PRADESH,23,2011_c,Orange Zone
+434,Ratlam,MADHYA PRADESH,23,2011_c,Green Zone
+430,Rewa,MADHYA PRADESH,23,2011_c,Orange Zone
+427,Sagar,MADHYA PRADESH,23,2011_c,Green Zone
+429,Satna,MADHYA PRADESH,23,2011_c,Orange Zone
+445,Sehore,MADHYA PRADESH,23,2011_c,Green Zone
+456,Seoni,MADHYA PRADESH,23,2011_c,Green Zone
+460,Shahdol,MADHYA PRADESH,23,2011_c,Green Zone
+436,Shajapur,MADHYA PRADESH,23,2011_c,Orange Zone
+418,Sheopur,MADHYA PRADESH,23,2011_c,Orange Zone
+423,Shivpuri,MADHYA PRADESH,23,2011_c,Oranee Zone
+462,Sidhi,MADHYA PRADESH,23,2011_c,Green Zone
+463,Singrauli,MADHYA PRADESH,23,2011_c,Green Zone
+424,Tikamgarh,MADHYA PRADESH,23,2011_c,Green Zone
+435,Ujjain,MADHYA PRADESH,23,2011_c,Orange Zone
+431,Umaria,MADHYA PRADESH,23,2011_c,Red Zone
+443,Vidisha,MADHYA PRADESH,23,2011_c,Green Zone
+440,West Nimar,MADHYA PRADESH,23,2011_c,Orange Zone
+522,Ahmadnagar,MAHARASHTRA,27,2011_c,Orange Zone
+501,Akola,MAHARASHTRA,27,2011_c,Red Zone
+503,Amravati,MAHARASHTRA,27,2011_c,Orange Zone
+515,Aurangabad,MAHARASHTRA,27,2011_c,Red Zone
+506,Bhandara,MAHARASHTRA,27,2011_c,Orange Zone
+523,Bid,MAHARASHTRA,27,2011_c,Orange Zone
+500,Buldana,MAHARASHTRA,27,2011_c,Orange Zone
+509,Chandrapur,MAHARASHTRA,27,2011_c,Orange Zone
+498,Dhule,MAHARASHTRA,27,2011_c,Red Zone
+508,Gadchiroli,MAHARASHTRA,27,2011_c,Green Zone
+507,Gondiya,MAHARASHTRA,27,2011_c,Green Zone
+512,Hingoli,MAHARASHTRA,27,2011_c,Orange Zone
+499,Jalgaon,MAHARASHTRA,27,2011_c,Red Zone
+514,Jalna,MAHARASHTRA,27,2011_c,Orange Zone
+530,Kolhapur,MAHARASHTRA,27,2011_c,Orange Zone
+524,Latur,MAHARASHTRA,27,2011_c,Orange Zone
+519,Mumbai,MAHARASHTRA,27,2011_c,Red Zone
+518,Mumbai Suburban,MAHARASHTRA,27,2011_c,Red Zone
+505,Nagpur,MAHARASHTRA,27,2011_c,Red Zone
+511,Nanded,MAHARASHTRA,27,2011_c,Orange Zone
+497,Nandurbar,MAHARASHTRA,27,2011_c,Orange Zone
+516,Nashik,MAHARASHTRA,27,2011_c,Red Zone
+525,Osmanabad,MAHARASHTRA,27,2011_c,Green Zone
+732,Palghar,MAHARASHTRA,27,update2014,Red Zone
+513,Parbhani,MAHARASHTRA,27,2011_c,Orange Zone
+521,Pune,MAHARASHTRA,27,2011_c,Red Zone
+520,Raigarh,MAHARASHTRA,27,2011_c,Orange Zone
+528,Ratnagiri,MAHARASHTRA,27,2011_c,Orange Zone
+531,Sangli,MAHARASHTRA,27,2011_c,Orange Zone
+527,Satara,MAHARASHTRA,27,2011_c,Red Zone
+529,Sindhudurg,MAHARASHTRA,27,2011_c,Green Zone
+526,Solapur,MAHARASHTRA,27,2011_c,Red Zone
+517,Thane,MAHARASHTRA,27,2011_c,Red Zone
+504,Wardha,MAHARASHTRA,27,2011_c,Green Zone
+502,Washim,MAHARASHTRA,27,2011_c,Green Zone
+510,Yavatmal,MAHARASHTRA,27,2011_c,Red Zone
+275,Bishnupur,MANIPUR,14,2011_c,Green Zone
+280,Chandel,MANIPUR,14,2011_c,Green Zone
+274,Churachandpur,MANIPUR,14,2011_c,Green Zone
+278,Imphal East,MANIPUR,14,2011_c,Green Zone
+277,Imphal West,MANIPUR,14,2011_c,Green Zone
+766,Jiribam,MANIPUR,14,2016_c,Green Zone
+768,Kakching,MANIPUR,14,2016_c,Green Zone
+770,Kamjong,MANIPUR,14,2016_c,Green Zone
+767,Kangpokpi,MANIPUR,14,2016_c,Green Zone
+771,Noney,MANIPUR,14,2016_c,Green Zone
+772,Pherzawl,MANIPUR,14,2016_c,Green Zone
+272,Senapati,MANIPUR,14,2011_c,Green Zone
+273,Tamenglong,MANIPUR,14,2011_c,Green Zone
+769,Tengnoupal,MANIPUR,14,2016_c,Green Zone
+276,Thoubal,MANIPUR,14,2011_c,Green Zone
+279,Ukhrul,MANIPUR,14,2011_c,Green Zone
+294,East Garo Hills,MEGHALAYA,17,2011_c,Green Zone
+714,East Jaintia Hills,MEGHALAYA,17,update2014,Green Zone
+298,East Khasi Hills,MEGHALAYA,17,2011_c,Orange Zone
+712,North Garo Hills,MEGHALAYA,17,update2014,Green Zone
+297,Ribhoi,MEGHALAYA,17,2011_c,Green Zone
+295,South Garo Hills,MEGHALAYA,17,2011_c,Green Zone
+711,South West Garo Hills,MEGHALAYA,17,update2014,Green Zone
+713,South West Khasi Hills,MEGHALAYA,17,update2014,Green Zone
+293,West Garo Hills,MEGHALAYA,17,2011_c,Green Zone
+299,West Jaintia Hills,MEGHALAYA,17,2011_c,Green Zone
+296,West Khasi Hills,MEGHALAYA,17,2011_c,Green Zone
+283,Aizawl,MIZORAM,15,2011_c,Green Zone
+284,Champhai,MIZORAM,15,2011_c,Green Zone
+282,Kolasib,MIZORAM,15,2011_c,Green Zone
+287,Lawngtlai,MIZORAM,15,2011_c,Green Zone
+286,Lunglei,MIZORAM,15,2011_c,Green Zone
+281,Mamit,MIZORAM,15,2011_c,Green Zone
+288,Saiha,MIZORAM,15,2011_c,Green Zone
+285,Serchhip,MIZORAM,15,2011_c,Green Zone
+265,Dimapur,NAGALAND,13,2011_c,Green Zone
+269,Kiphire,NAGALAND,13,2011_c,Green Zone
+270,Kohima,NAGALAND,13,2011_c,Green Zone
+268,Longleng,NAGALAND,13,2011_c,Green Zone
+262,Mokokchung,NAGALAND,13,2011_c,Green Zone
+261,Mon,NAGALAND,13,2011_c,Green Zone
+271,Peren,NAGALAND,13,2011_c,Green Zone
+266,Phek,NAGALAND,13,2011_c,Green Zone
+267,Tuensang,NAGALAND,13,2011_c,Green Zone
+264,Wokha,NAGALAND,13,2011_c,Green Zone
+263,Zunheboto,NAGALAND,13,2011_c,Green Zone
+384,Anugul,ODISHA,21,2011_c,Green Zone
+393,Balangir,ODISHA,21,2011_c,Green Zone
+377,Baleshwar,ODISHA,21,2011_c,Red Zone
+370,Bargarh,ODISHA,21,2011_c,Green Zone
+391,Baudh,ODISHA,21,2011_c,Red Zone
+378,Bhadrak,ODISHA,21,2011_c,Green Zone
+381,Cuttack,ODISHA,21,2011_c,Green Zone
+373,Debagarh,ODISHA,21,2011_c,Green Zone
+383,Dhenkanal,ODISHA,21,2011_c,Orange Zone
+389,Gajapati,ODISHA,21,2011_c,Green Zone
+388,Ganjam,ODISHA,21,2011_c,Green Zone
+380,Jagatsinghapur,ODISHA,21,2011_c,Green Zone
+382,Jajapur,ODISHA,21,2011_c,Red Zone
+371,Jharsuguda,ODISHA,21,2011_c,Green Zone
+395,Kalahandi,ODISHA,21,2011_c,Orange Zone
+390,Kandhamal,ODISHA,21,2011_c,Green Zone
+379,Kendrapara,ODISHA,21,2011_c,Orange Zone
+375,Kendujhar,ODISHA,21,2011_c,Green Zone
+386,Khordha,ODISHA,21,2011_c,Orange Zone
+398,Koraput,ODISHA,21,2011_c,Orange Zone
+399,Malkangiri,ODISHA,21,2011_c,Green Zone
+376,Mayurbhanj,ODISHA,21,2011_c,Green Zone
+397,Nabarangapur,ODISHA,21,2011_c,Green Zone
+385,Nayagarh,ODISHA,21,2011_c,Green Zone
+394,Nuapada,ODISHA,21,2011_c,Green Zone
+387,Puri,ODISHA,21,2011_c,Green Zone
+396,Rayagada,ODISHA,21,2011_c,Green Zone
+372,Sambalpur,ODISHA,21,2011_c,Green Zone
+392,Subarnapur,ODISHA,21,2011_c,Green Zone
+374,Sundargarh,ODISHA,21,2011_c,Orange Zone
+637,Karaikal,PUDUCHERRY,34,2011_c,Green Zone
+636,Mahe,PUDUCHERRY,34,2011_c,Green Zone
+635,Puducherry,PUDUCHERRY,34,2011_c,Orange Zone
+634,Yanam,PUDUCHERRY,34,2011_c,Green Zone
+49,Amritsar,PUNJAB,3,2011_c,Orange Zone
+54,Barnala,PUNJAB,3,2011_c,Orange Zone
+46,Bathinda,PUNJAB,3,2011_c,Green Zone
+45,Faridkot,PUNJAB,3,2011_c,Orange Zone
+40,Fatehgarh Sahib,PUNJAB,3,2011_c,Green Zone
+701,Fazilka,PUNJAB,3,update2014,Green Zone
+43,Firozpur,PUNJAB,3,2011_c,Orange Zone
+35,Gurdaspur,PUNJAB,3,2011_c,Orange Zone
+38,Hoshiarpur,PUNJAB,3,2011_c,Orange Zone
+37,Jalandhar,PUNJAB,3,2011_c,Red Zone
+36,Kapurthala,PUNJAB,3,2011_c,Orange Zone
+41,Ludhiana,PUNJAB,3,2011_c,Red Zone
+47,Mansa,PUNJAB,3,2011_c,Orange Zone
+42,Moga,PUNJAB,3,2011_c,Orange Zone
+773,Pathankot,PUNJAB,3,2011_c,Oranee Zone
+48,Patiala,PUNJAB,3,2011_c,Red Zone
+51,Rupnagar,PUNJAB,3,2011_c,Green Zone
+52,S.A.S. Nagar,PUNJAB,3,2011_c,Orange Zone
+53,Sangrur,PUNJAB,3,2011_c,Orange Zone
+39,Shahid Bhagat Singh Nagar,PUNJAB,3,2011_c,Orange Zone
+44,Sri Muktsar Sahib,PUNJAB,3,2011_c,Orange Zone
+50,Tarn Taran,PUNJAB,3,2011_c,Orange Zone
+119,Ajmer,RAJASTHAN,8,2011_c,Red Zone
+104,Alwar,RAJASTHAN,8,2011_c,Orange Zone
+125,Banswara,RAJASTHAN,8,2011_c,Red Zone
+128,Baran,RAJASTHAN,8,2011_c,Green Zone
+115,Barmer,RAJASTHAN,8,2011_c,Orange Zone
+105,Bharatpur,RAJASTHAN,8,2011_c,Red Zone
+122,Bhilwara,RAJASTHAN,8,2011_c,Orange Zone
+101,Bikaner,RAJASTHAN,8,2011_c,Orange Zone
+121,Bundi,RAJASTHAN,8,2011_c,Green Zone
+126,Chittaurgarh,RAJASTHAN,8,2011_c,Orange Zone
+102,Churu,RAJASTHAN,8,2011_c,Orange Zone
+109,Dausa,RAJASTHAN,8,2011_c,Oranse Zone
+106,Dhaulpur,RAJASTHAN,8,2011_c,Orange Zone
+124,Dungarpur,RAJASTHAN,8,2011_c,Orange Zone
+99,Ganganagar,RAJASTHAN,8,2011_c,Green Zone
+100,Hanumangarh,RAJASTHAN,8,2011_c,Orange Zone
+110,Jaipur,RAJASTHAN,8,2011_c,Red Zone
+114,Jaisalmer,RAJASTHAN,8,2011_c,Orange Zone
+116,Jalor,RAJASTHAN,8,2011_c,Green Zone
+129,Jhalawar,RAJASTHAN,8,2011_c,Red Zone
+103,Jhunjhunu,RAJASTHAN,8,2011_c,Orange Zone
+113,Jodhpur,RAJASTHAN,8,2011_c,Red Zone
+107,Karauli,RAJASTHAN,8,2011_c,Oranse Zone
+127,Kota,RAJASTHAN,8,2011_c,Red Zone
+112,Nagaur,RAJASTHAN,8,2011_c,Red Zone
+118,Pali,RAJASTHAN,8,2011_c,Orange Zone
+131,Pratapgarh,RAJASTHAN,8,2011_c,Green Zone
+123,Rajsamand,RAJASTHAN,8,2011_c,Orange Zone
+108,Sawai Madhopur,RAJASTHAN,8,2011_c,Orange Zone
+111,Sikar,RAJASTHAN,8,2011_c,Orange Zone
+117,Sirohi,RAJASTHAN,8,2011_c,Green Zone
+120,Tonk,RAJASTHAN,8,2011_c,Orange Zone
+130,Udaipur,RAJASTHAN,8,2011_c,Oranse Zone
+244,East District,SIKKIM,11,2011_c,Green Zone
+241,North  District,SIKKIM,11,2011_c,Green Zone
+243,South District,SIKKIM,11,2011_c,Green Zone
+242,West District,SIKKIM,11,2011_c,Green Zone
+616,Ariyalur,TAMIL NADU,33,2011_c,Orange Zone
+603,Chennai,TAMIL NADU,33,2011_c,Red Zone
+632,Coimbatore,TAMIL NADU,33,2011_c,Oranqe Zone
+617,Cuddalore,TAMIL NADU,33,2011_c,Orange Zone
+630,Dharmapuri,TAMIL NADU,33,2011_c,Orange Zone
+612,Dindigul,TAMIL NADU,33,2011_c,Orange Zone
+610,Erode,TAMIL NADU,33,2011_c,Orange Zone
+604,Kancheepuram,TAMIL NADU,33,2011_c,Red Zone
+629,Kanniyakumari,TAMIL NADU,33,2011_c,Orange Zone
+613,Karur,TAMIL NADU,33,2011_c,Orange Zone
+631,Krishnagiri,TAMIL NADU,33,2011_c,Green Zone
+623,Madurai,TAMIL NADU,33,2011_c,Red Zone
+618,Nagapattinam,TAMIL NADU,33,2011_c,Orange Zone
+609,Namakkal,TAMIL NADU,33,2011_c,Red Zone
+615,Perambalur,TAMIL NADU,33,2011_c,Orange Zone
+621,Pudukkottai,TAMIL NADU,33,2011_c,Orange Zone
+626,Ramanathapuram,TAMIL NADU,33,2011_c,Orange Zone
+608,Salem,TAMIL NADU,33,2011_c,Orange Zone
+622,Sivaganga,TAMIL NADU,33,2011_c,Orange Zone
+620,Thanjavur,TAMIL NADU,33,2011_c,Red Zone
+611,The Nilgiris,TAMIL NADU,33,2011_c,Orange Zone
+624,Theni,TAMIL NADU,33,2011_c,Orange Zone
+602,Thiruvallur,TAMIL NADU,33,2011_c,Red Zone
+619,Thiruvarur,TAMIL NADU,33,2011_c,Red Zone
+627,Thoothukkudi,TAMIL NADU,33,2011_c,Orange Zone
+614,Tiruchirappalli,TAMIL NADU,33,2011_c,Orange Zone
+628,Tirunelveli,TAMIL NADU,33,2011_c,Orange Zone
+633,Tiruppur,TAMIL NADU,33,2011_c,Red Zone
+606,Tiruvannamalai,TAMIL NADU,33,2011_c,Orange Zone
+605,Vellore,TAMIL NADU,33,2011_c,Red Zone
+607,Viluppuram,TAMIL NADU,33,2011_c,Orange Zone
+625,Virudhunagar,TAMIL NADU,33,2011_c,Red Zone
+532,Adilabad,TELANGANA,36,2016_c,Orange Zone
+753,Bhadradri Kothagudem,TELANGANA,36,2016_c,Green Zone
+536,Hyderabad,TELANGANA,36,2016_c,Red Zone
+737,Jagitial,TELANGANA,36,2016_c,Orange Zone
+752,Jangoan,TELANGANA,36,2016_c,Orange Zone
+750,Jayashankar,TELANGANA,36,2016_c,Oranse Zone
+744,Jogulamba Gadwal,TELANGANA,36,2016_c,Orange Zone
+736,Kamareddy,TELANGANA,36,2016_c,Orange Zone
+534,Karimnagar,TELANGANA,36,2016_c,Orange Zone
+541,Khammam,TELANGANA,36,2016_c,Orange Zone
+733,Kumuram Bheem Asifabad,TELANGANA,36,2016_c,Orange Zone
+751,Mahabubabad,TELANGANA,36,2016_c,Green Zone
+538,Mahabubnagar,TELANGANA,36,2016_c,Orange Zone
+735,Mancherial,TELANGANA,36,2016_c,Orange Zone
+535,Medak,TELANGANA,36,2016_c,Orange Zone
+742,Medchal Malkajgiri,TELANGANA,36,2016_c,Red Zone
+780,Mulugu,TELANGANA,36,2019,Green Zone
+746,Nagarkurnool,TELANGANA,36,2016_c,Green Zone
+539,Nalgonda,TELANGANA,36,2016_c,Orange Zone
+781,Narayanpet,TELANGANA,36,2019,Orange Zone
+734,Nirmal,TELANGANA,36,2016_c,Orange Zone
+533,Nizamabad,TELANGANA,36,2016_c,Orange Zone
+738,Peddapalli,TELANGANA,36,2016_c,Green Zone
+739,Rajanna Sircilla,TELANGANA,36,2016_c,Orange Zone
+537,Ranga Reddy,TELANGANA,36,2016_c,Red Zone
+740,Sangareddy,TELANGANA,36,2016_c,Orange Zone
+741,Siddipet,TELANGANA,36,2016_c,Green Zone
+748,Suryapet,TELANGANA,36,2016_c,Red Zone
+743,Vikarabad,TELANGANA,36,2016_c,Red Zone
+745,Wanaparthy,TELANGANA,36,2016_c,Green Zone
+749,Warangal Rural,TELANGANA,36,2016_c,Green Zone
+540,Warangal Urban,TELANGANA,36,2016_c,Red Zone
+747,Yadadri Bhuvanagiri,TELANGANA,36,2016_c,Green Zone
+291,Dhalai,TRIPURA,16,2011_c,Green Zone
+709,Gomati,TRIPURA,16,update2014,Orange Zone
+708,Khowai,TRIPURA,16,update2014,Green Zone
+292,North Tripura,TRIPURA,16,2011_c,Orange Zone
+707,Sipahijala,TRIPURA,16,update2014,Green Zone
+290,South Tripura,TRIPURA,16,2011_c,Green Zone
+710,Unokoti,TRIPURA,16,update2014,Green Zone
+289,West Tripura,TRIPURA,16,2011_c,Green Zone
+146,Agra,UTTAR PRADESH,9,2011_c,Red Zone
+143,Aligarh,UTTAR PRADESH,9,2011_c,Red Zone
+178,Ambedkar Nagar,UTTAR PRADESH,9,2011_c,Green Zone
+706,Amethi,UTTAR PRADESH,9,update2014,Green Zone
+137,Amroha,UTTAR PRADESH,9,2011_c,Red Zone
+162,Auraiya,UTTAR PRADESH,9,2011_c,Orange Zone
+191,Azamgarh,UTTAR PRADESH,9,2011_c,Orange Zone
+139,Baghpat,UTTAR PRADESH,9,2011_c,Oranee Zone
+180,Bahraich,UTTAR PRADESH,9,2011_c,Oranee Zone
+193,Ballia,UTTAR PRADESH,9,2011_c,Orange Zone
+182,Balrampur,UTTAR PRADESH,9,2011_c,Green Zone
+170,Banda,UTTAR PRADESH,9,2011_c,Oranee Zone
+176,Bara Banki,UTTAR PRADESH,9,2011_c,Oranse Zone
+150,Bareilly,UTTAR PRADESH,9,2011_c,Green Zone
+185,Basti,UTTAR PRADESH,9,2011_c,Red Zone
+198,Bhadohi,UTTAR PRADESH,9,2011_c,Orange Zone
+134,Bijnor,UTTAR PRADESH,9,2011_c,Orange Zone
+149,Budaun,UTTAR PRADESH,9,2011_c,Red Zone
+142,Bulandshahr,UTTAR PRADESH,9,2011_c,Orange Zone
+196,Chandauli,UTTAR PRADESH,9,2011_c,Red Zone
+171,Chitrakoot,UTTAR PRADESH,9,2011_c,Green Zone
+190,Deoria,UTTAR PRADESH,9,2011_c,Green Zone
+201,Etah,UTTAR PRADESH,9,2011_c,Green Zone
+161,Etawah,UTTAR PRADESH,9,2011_c,Orange Zone
+177,Faizabad,UTTAR PRADESH,9,2011_c,Orange Zone
+159,Farrukhabad,UTTAR PRADESH,9,2011_c,Green Zone
+172,Fatehpur,UTTAR PRADESH,9,2011_c,Green Zone
+147,Firozabad,UTTAR PRADESH,9,2011_c,Red Zone
+141,Gautam Buddha Nagar,UTTAR PRADESH,9,2011_c,Red Zone
+140,Ghaziabad,UTTAR PRADESH,9,2011_c,Orange Zone
+195,Ghazipur,UTTAR PRADESH,9,2011_c,Orange Zone
+183,Gonda,UTTAR PRADESH,9,2011_c,Orange Zone
+188,Gorakhpur,UTTAR PRADESH,9,2011_c,Orange Zone
+168,Hamirpur,UTTAR PRADESH,9,2011_c,Orange Zone
+705,Hapur,UTTAR PRADESH,9,update2014,Green Zone
+155,Hardoi,UTTAR PRADESH,9,2011_c,Orange Zone
+144,Hathras,UTTAR PRADESH,9,2011_c,Green Zone
+165,Jalaun,UTTAR PRADESH,9,2011_c,Orange Zone
+194,Jaunpur,UTTAR PRADESH,9,2011_c,Orange Zone
+166,Jhansi,UTTAR PRADESH,9,2011_c,Orange Zone
+160,Kannauj,UTTAR PRADESH,9,2011_c,Orange Zone
+163,Kanpur Dehat,UTTAR PRADESH,9,2011_c,Green Zone
+164,Kanpur Nagar,UTTAR PRADESH,9,2011_c,Red Zone
+202,Kasganj,UTTAR PRADESH,9,2011_c,Orange Zone
+174,Kaushambi,UTTAR PRADESH,9,2011_c,Orange Zone
+153,Kheri,UTTAR PRADESH,9,2011_c,Green Zone
+189,Kushinagar,UTTAR PRADESH,9,2011_c,Green Zone
+167,Lalitpur,UTTAR PRADESH,9,2011_c,Green Zone
+157,Lucknow,UTTAR PRADESH,9,2011_c,Red Zone
+169,Mahoba,UTTAR PRADESH,9,2011_c,Green Zone
+187,Mahrajganj,UTTAR PRADESH,9,2011_c,Green Zone
+148,Mainpuri,UTTAR PRADESH,9,2011_c,Orange Zone
+145,Mathura,UTTAR PRADESH,9,2011_c,Red Zone
+192,Mau,UTTAR PRADESH,9,2011_c,Orange Zone
+138,Meerut,UTTAR PRADESH,9,2011_c,Red Zone
+199,Mirzapur,UTTAR PRADESH,9,2011_c,Orange Zone
+135,Moradabad,UTTAR PRADESH,9,2011_c,Red Zone
+133,Muzaffarnagar,UTTAR PRADESH,9,2011_c,Red Zone
+151,Pilibhit,UTTAR PRADESH,9,2011_c,Orange Zone
+173,Pratapgarh,UTTAR PRADESH,9,2011_c,Orange Zone
+175,Prayagraj,UTTAR PRADESH,9,2011_c,Orange Zone
+158,Rae Bareli,UTTAR PRADESH,9,2011_c,Red Zone
+136,Rampur,UTTAR PRADESH,9,2011_c,Red Zone
+132,Saharanpur,UTTAR PRADESH,9,2011_c,Red Zone
+754,Sambhal,UTTAR PRADESH,9,2011_c,Orange Zone
+186,Sant Kabir Nagar,UTTAR PRADESH,9,2011_c,Red Zone
+152,Shahjahanpur,UTTAR PRADESH,9,2011_c,Green Zone
+704,Shamli,UTTAR PRADESH,9,update2014,Orange Zone
+181,Shrawasti,UTTAR PRADESH,9,2011_c,Orange Zone
+184,Siddharthnagar,UTTAR PRADESH,9,2011_c,Green Zone
+154,Sitapur,UTTAR PRADESH,9,2011_c,Orange Zone
+200,Sonbhadra,UTTAR PRADESH,9,2011_c,Green Zone
+179,Sultanpur,UTTAR PRADESH,9,2011_c,Orange Zone
+156,Unnao,UTTAR PRADESH,9,2011_c,Orange Zone
+197,Varanasi,UTTAR PRADESH,9,2011_c,Red Zone
+64,Almora,UTTARAKHAND,5,2011_c,Green Zone
+63,Bageshwar,UTTARAKHAND,5,2011_c,Green Zone
+57,Chamoli,UTTARAKHAND,5,2011_c,Green Zone
+65,Champawat,UTTARAKHAND,5,2011_c,Green Zone
+60,Dehradun,UTTARAKHAND,5,2011_c,Orange Zone
+61,Garhwal,UTTARAKHAND,5,2011_c,Red Zone
+68,Hardwar,UTTARAKHAND,5,2011_c,Orange Zone
+66,Nainital,UTTARAKHAND,5,2011_c,Green Zone
+62,Pithoragarh,UTTARAKHAND,5,2011_c,Green Zone
+58,Rudraprayag,UTTARAKHAND,5,2011_c,Green Zone
+59,Tehri Garhwal,UTTARAKHAND,5,2011_c,Green Zone
+67,Udham Singh Nagar,UTTARAKHAND,5,2011_c,Green Zone
+56,Uttarkashi,UTTARAKHAND,5,2011_c,Green Zone
+774,Alipurduar,WEST BENGAL,19,2014_c,Green Zone
+339,Bankura,WEST BENGAL,19,2011_c,Green Zone
+334,Birbhum,WEST BENGAL,19,2011_c,Green Zone
+329,Cooch Behar,WEST BENGAL,19,2011_c,Green Zone
+331,Dakshin Dinajpur,WEST BENGAL,19,2011_c,Green Zone
+327,Darjeeling,WEST BENGAL,19,2011_c,Red Zone
+338,Hooghly,WEST BENGAL,19,2011_c,Orange Zone
+341,Howrah,WEST BENGAL,19,2011_c,Red Zone
+328,Jalpaiguri,WEST BENGAL,19,2011_c,Red Zone
+776,Jhargram,WEST BENGAL,19,2017_c,Green Zone 
+775,Kalimpong,WEST BENGAL,19,2017_c,Red Zone
+342,Kolkata,WEST BENGAL,19,2011_c,Red Zone
+332,Maldah,WEST BENGAL,19,2011_c,Red Zone
+344,Medinipur West,WEST BENGAL,19,2011_c,Red Zone
+333,Murshidabad,WEST BENGAL,19,2011_c,Red Zone
+336,Nadia,WEST BENGAL,19,2011_c,Orange Zone
+337,North 24 Parganas,WEST BENGAL,19,2011_c,Orange Zone
+777,Paschim Bardhaman,WEST BENGAL,19,2017_c,Red Zone
+335,Purba Bardhaman,WEST BENGAL,19,2011_c,Orange Zone
+345,Purba Medinipur,WEST BENGAL,19,2011_c,Orange Zone
+340,Puruliya,WEST BENGAL,19,2011_c,Green Zone
+343,South 24 Parganas,WEST BENGAL,19,2011_c,Red Zone
+330,Uttar Dinajpur,WEST BENGAL,19,2011_c,Green Zone
