@@ -34,8 +34,8 @@ var dd =  String(parseInt(String(today.getDate()).padStart(2, '0')) -1);
 
 var yyyy = today.getFullYear();
 
-today = yyyy + '-' + mm + '-' + String((dd+1));
-yesterday = yyyy + '-' + mm + '-' + String((dd+1));
+today = yyyy + '-' + mm + '-' + 0+String(dd);
+yesterday = yyyy + '-' + mm + '-' + String(dd-1);
 console.log(today);
 
 arr=[]
@@ -247,7 +247,8 @@ document.getElementById("demo").style.visibility = "hidden";
     }
   };
   
-  var url = "https://api.allorigins.win/raw?url=https://data.thejeshgn.com/covid19/_design/india/_view/incidents?descending=false&nounce="+yyyy+mm+dd+hour
+  var url = "https://cors-anywhere.herokuapp.com/https://data.thejeshgn.com/covid19/_design/india/_view/incidents?descending=false&nounce="+yyyy+mm+0+dd
+  console.log(url)
   xhttp.open("GET", url , true);
   xhttp.send();
 
@@ -274,19 +275,19 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 function getColor(d) {
-    return d >= 0 && d <=100 ? '#DC143C' :
-           d > 100 && d <= 500  ? '#800026' :
-           d > 500 && d<=2000 ? '#8b0023' :
-		   d > 2000 ? '#000000' :
+    return d >= 0 && d <=1000 ? '#DC143C' :
+           d > 1000 && d <= 2000  ? '#800026' :
+           d > 2000 && d<=5000 ? '#8b0023' :
+		   d > 5000 ? '#000000' :
            
                       '#000000';
 }
 
 function getColor1(d) {
-    return d >= 0 && d <10 ? '#DC143C' :
-           d > 10 && d < 50  ? '#800026' :
-           d > 51 && d<100 ? '#8b0023' :
-		   d > 101 ? '#000000' :
+    return d >= 0 && d <50 ? '#DC143C' :
+           d > 50 && d < 100  ? '#800026' :
+           d > 100 && d<500 ? '#8b0023' :
+		   d > 501 ? '#000000' :
            
                       '#000000';
 }
@@ -314,9 +315,9 @@ var legend1 = L.control({ position: "bottomleft" });
 legend1.onAdd = function(map) {
   var div = L.DomUtil.create("div", "legend");
   div.innerHTML += "<h4>Total Confirmed</h4>";
-  div.innerHTML += '<i style="background:#000000"></i><span>50+</span><br>';
-  div.innerHTML += '<i style="background: #800026"></i><span>10-50</span><br>';
-  div.innerHTML += '<i style="background: #DC143C"></i><span>0-10</span><br>';
+  div.innerHTML += '<i style="background:#000000"></i><span>100-500</span><br>';
+  div.innerHTML += '<i style="background: #800026"></i><span>50-100</span><br>';
+  div.innerHTML += '<i style="background: #DC143C"></i><span>0-50</span><br>';
   div.innerHTML += '<i style="background: #0000FF"></i><span>No patient</span><br>';
   //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
   //div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
@@ -333,9 +334,9 @@ var legend = L.control({ position: "bottomleft" });
 legend.onAdd = function(map) {
   var div = L.DomUtil.create("div", "legend");
   div.innerHTML += "<h4>Total Confirmed</h4>";
-  div.innerHTML += '<i style="background:#000000"></i><span>1500+</span><br>';
-  div.innerHTML += '<i style="background: #800026"></i><span>100-1500</span><br>';
-  div.innerHTML += '<i style="background: #DC143C"></i><span>0-100</span><br>';
+  div.innerHTML += '<i style="background:#000000"></i><span>5000+</span><br>';
+  div.innerHTML += '<i style="background: #800026"></i><span>1000-5000</span><br>';
+  div.innerHTML += '<i style="background: #DC143C"></i><span>0-1000</span><br>';
   div.innerHTML += '<i style="background: #0000FF"></i><span>No patient</span><br>';
   //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
   //div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
