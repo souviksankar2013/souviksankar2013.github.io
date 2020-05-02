@@ -35,8 +35,8 @@ var dd =  String(parseInt(String(today.getDate()).padStart(2, '0')) -1);
 var yyyy = today.getFullYear();
 
 today = yyyy + '-' + mm + '-' + 0+String(dd);
-yesterday = yyyy + '-' + mm + '-' + String(dd-1);
-console.log(today);
+yesterday = yyyy + '-' + mm + '-' + 0+String(dd-1);
+console.log(yesterday);
 
 arr=[]
 	  arr2=[]
