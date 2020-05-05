@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="leaflet/leaflet.css"/>
+<script src="leaflet/leaflet.js"></script>
+<script src="districts_729.js"></script>
+<script src="states.js"></script>
+<script src="tabletop.js"></script>
+
+<script src="https://unpkg.com/@turf/turf@3.5.2/turf.min.js"></script>
+<title>India Corona Live Update District</title>
+<style>
+    #map{ height: 550px; }
+	/*Legend specific*/
+.legend {
+  padding: 6px 8px;
+  font: 14px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  /*box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);*/
+  /*border-radius: 5px;*/
+  line-height: 24px;
+  color: #555;
+}
+.legend h4 {
+  text-align: center;
+  font-size: 16px;
+  margin: 2px 12px 8px;
+  color: #777;
+}
+
+.legend span {
+  position: relative;
+  bottom: 3px;
+}
+
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin: 0 8px 0 0;
+  opacity: 0.7;
+}
+
+.legend i.icon {
+  background-size: 18px;
+  background-color: rgba(255, 255, 255, 1);
+}
+  </style>
+</head>
+
+<body>
+
+<h2 align="center">CONTAINMENT ZONE (KOLKATA) </h2>
+<div align="center">
+	<button id="button1" onclick="loc1()"><h3>Get Your Location</h3></button>
+	</div>
+<!-- <p id="date" align="center"></p> -->
+<div id="map"></div>
+<div id="demo"> </div>
+<div id="demo1"> </div>
+<div id="demo2"> </div>
+<div id="demo3"> </div>
+<div id="demo4"> </div>
+<div id="demo5"> </div>
+
+<script>
+
+
+arr1=[]
+arr2=[]
+arr3=[]
+arr4=[]
+arr5=[]
+Tabletop.init( { key: "1TSVqnGUPTpbLq18kQj2_bDN3tUDpsQkiCDfhpfm4eEo", callback: getdata, simpleSheet: false } );
+
+function getdata(d, tabletop) {
+		var data, metadata = [];
+		data = tabletop.sheets("Sheet1").elements;
+		//metadata = tabletop.sheets("readme").elements;
+
+
+		
+		
+		for ( var i = 0; i < data.length; i++ ){
+			arr1.push(data[i]["Name1"])
+			arr2.push(data[i]["Latitude"])
+			arr3.push(data[i]["Longitude"])
+			//arr4.push(data[i]["Deaths"])
+			//arr5.push(data[i]["Active"])
+		}
+		document.getElementById("demo").innerHTML = arr1
+		document.getElementById("demo1").innerHTML = arr2
+		document.getElementById("demo2").innerHTML = arr3
+		//document.getElementById("demo3").innerHTML = arr4
+		//document.getElementById("demo4").innerHTML = arr5
+
+	document.getElementById("demo").style.visibility = "hidden";
+	document.getElementById("demo1").style.visibility = "hidden";
+	document.getElementById("demo2").style.visibility = "hidden";
+	//document.getElementById("demo3").style.visibility = "hidden";
+	//document.getElementById("demo4").style.visibility = "hidden";
+
+
+	}
+	
+
+
+
+
+
+  var map = L.map('map').setView([22.536211,88.370476 ], 12);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// function getColor(d) {
+//     return d >= 0 && d <5 ? '#DC143C' :
+//            d > 5 && d < 10  ? '#800026' :
+//            d > 10 && d<15 ? '#8b0023' :
+// 		   d > 15 ? '#000000' :
+           
+//                       '#000000';
+// }
+
+function loc1()
+  {
+
+//   var arr1 = hos1.getLayers().map(l => l.feature.geometry.coordinates)
+
+  navigator.geolocation.getCurrentPosition(function(location) {
+  var latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
+
+  var zoom = 16;
+// console.log(latlng.lng)
+
+//   var closestlayer = L.GeometryUtil.closestLayer(map,hos1.getLayers(), latlng);
+//   // console.log(closestMarker)
+//   console.log(closestlayer.distance)
+  
+  var marker = L.marker(latlng).addTo(map);
+
+  //var mark1 = L.marker(closestlayer,{icon:greenIcon1}).addTo(map);
+
+  //closestlayer.setIcon(greenIcon1);
+
+//   var marker1 = L.marker(closestlayer.latlng,{icon:greenIcon1}).addTo(map);
+
+//   marker1.bindPopup(closestlayer.layer.feature.properties.label).openPopup();
+  
+
+  map.setView(latlng, zoom);
+
+//   button.disabled = true
+
+//   L.Routing.control({
+//   waypoints: [
+//     L.latLng(latlng),
+//     L.latLng(closestlayer.latlng)
+//   ]
+// }).addTo(map);
+
+
+
+
+});
+  }
+
+
+setTimeout(function(){
+	var arr7=document.getElementById("demo").innerHTML;
+	var arr8=document.getElementById("demo1").innerHTML;
+	var arr9=document.getElementById("demo2").innerHTML;
+
+
+
+
+	
+
+	
+
+
+
+	//var arr10=document.getElementById("demo3").innerHTML;
+	//var arr11=document.getElementById("demo4").innerHTML;
+	arr7=arr7.split(",");
+// 	console.log(arr7)
+	arr8=arr8.split(",");
+	arr9=arr9.split(",");
+
+	console.log(arr8[11])
+
+for (var i=0;i<arr8.length;i++)
+{
+	var marker = L.marker([arr8[i],arr9[i]])
+
+
+
+// 	var point = turf.point([parseFloat(arr8[i]),parseFloat(arr9[i])]);
+// var buffered = turf.buffer(point, 20, {units: 'kilometers'});
+
+// L.geoJson(buffered).addTo(map);
+
+	marker.bindPopup(arr7[i])
+
+	var pt = {
+  "type": "Feature",
+  "properties": {},
+  "geometry": {
+    "type": "Point",
+    "coordinates": [parseFloat(arr9[i]),parseFloat(arr8[i])]
+  }
+};
+var unit = 'meters';
+
+var buffered = turf.buffer(pt, 130, unit);
+//var result = turf.featurecollection([buffered, pt]);
+
+var bufferLayer500 =L.geoJson(buffered).addTo(map); 
+bufferLayer500.setStyle({color: "red"}); 
+bufferLayer500.bindPopup(arr7[i])
+
+
+}
+
+
+
+
+// var point = turf.point([22.536211,88.370476]);
+// var buffered = turf.buffer(point, 2000, {units: 'kilometers'});
+
+// resultFeatures = buffered.features.concat(geojson);
+//     return  {
+//         "type": "FeatureCollection",
+//         "features": resultFeatures
+//     };
+// var buf = L.geoJson(resultFeatures).addTo(map);
+
+
+
+
+
+
+
+// var point = turf.point([22.536211,88.370476]);
+// var buffered = turf.buffer(point, 500, {units: 'miles'});
+// 	arr10=arr10.split(",");
+// 	arr11=arr11.split(",");
+
+// 	function style(feature) {
+
+// 		var color = "#feebe2";
+
+
+
+// 		for (var i in arr7)
+// 		{
+// 		if(arr7[i] == feature.properties.dtname)
+// 			{
+
+// 				if (arr8[i] > 20) color = "#000000";
+// 				else if (arr8[i] > 10 && arr8[i] <= 20 ) color = "#8b0023";
+// 				else if (arr8[i] > 5 && arr8[i] <= 10) color = "#800026";
+// 				else if (arr8[i] >= 1 && arr8[i] <= 5) color = "#DC143C";
+// 				else {color = "#feebe2";}
+
+// 				return {
+//           fillColor: color,
+//           weight: 1,
+//           opacity: 0.4,
+//           color: 'black',
+//           dashArray: '1',
+// 		  fillOpacity: 0.7,
+		  
+// 		};
+// 	}
+// }
+// }
+
+
+
+// function style1(feature)
+// {
+// 	return{
+		
+// 		weight: 1,
+//           opacity: 0.9,
+//           color: "#000",
+//           fill: false
+// 	};
+// }
+
+
+
+
+
+
+
+
+// 	L.geoJson(geodist, {
+// 		style: style,
+//     onEachFeature: function (feature, layer) {
+		
+// 		for (var i in arr7)
+// 		{
+			
+// 			if(arr7[i] == feature.properties.dtname)
+// 			{
+//        layer.bindPopup("<p>State: "+ feature.properties.stname +" <br> District :" + feature.properties.dtname +" <br> Confirmed :" + arr8[i] + "<br> Discharged " + arr9[i] + "<br> Death: " + arr10[i] + "<br> Active: " + arr11[i] + "<br></p>")}}}
+// }).addTo(map);
+// L.geoJson(geoStates,{
+// 		style: style1}).addTo(map)
+	  }, 3000);
+
+
+
+
+
+// 	  var legend = L.control({ position: "bottomleft" });
+
+// legend.onAdd = function(map) {
+//   var div = L.DomUtil.create("div", "legend");
+//   div.innerHTML += "<h4>As per Infected Indian</h4>";
+//   div.innerHTML += '<i style="background:#000000"></i><span>20+</span><br>';
+//   div.innerHTML += '<i style="background: #800026"></i><span>5-20</span><br>';
+//   div.innerHTML += '<i style="background: #DC143C"></i><span>0-5</span><br>';
+//   div.innerHTML += '<i style="background: #0000FF"></i><span>No patient</span><br>';
+//   //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
+//   //div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
+//   //div.innerHTML += '<i class="icon" style="background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/194515-200.png);background-repeat: no-repeat;"></i><span>Grænse</span><br>';
+  
+  
+
+//   return div;
+// };
+
+// legend.addTo(map);
+
+
+
+
+
+
+
+
+
+	
+
+
+	
+
+	
+
+	 
+
+  </script>
+</body>
+</html>
