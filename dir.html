@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+
+
+    <style>
+
+.maps-link {
+  margin: 0 auto;
+  width: 150px;
+  padding: 20px 0;
+  
+  img { width: 150px; }
+}
+
+.details {
+  width: 600px;
+  margin: 0 auto;
+  font-family: "Open Sans";
+}
+        </style>
+
+
+<script>
+
+function mapsSelector() {
+  if /* if we're on iOS, open in Apple Maps */
+    ((navigator.platform.indexOf("iPhone") != -1) || 
+     (navigator.platform.indexOf("iPod") != -1) || 
+     (navigator.platform.indexOf("iPad") != -1))
+    window.open("maps://maps.google.com/maps?daddr=lat,long&amp;ll=");
+
+  else /* else use Google */
+    window.open("https://maps.google.com/maps?daddr=lat,long&amp;ll=");
+}
+</script>
+</head>
+
+<body>
+
+
+    <div class="maps-link">
+        <img style="cursor: pointer;" onclick="mapsSelector()" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/747/maps-icon.png" />
+      </div>
+      
+      <div class="details">
+      <p>The above icon is liked to Google Maps. It uses a small library to detect whether or not the user is on iOS.</p>
+        
+      <p>By doing this, we can ensure that all users on iOS and Android will have this link open in their native maps app. If the user is on desktop, they will get Google Maps on desktop.</p>
+      
+      <p>Before implimenting this code, you would want to update the lat and long to the variables used in your application.</p>
+      </div>
+</body>
+
+
+
+</html>
