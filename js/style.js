@@ -18,10 +18,10 @@ else
 {
 	if(dd<=9)
 	
-var dd =  0+String(parseInt(String(today.getDate()).padStart(2, '0')) -1);
+var dd =  0+String(parseInt(String(today.getDate()).padStart(2, '0')));
 
 else
-var dd =  String(parseInt(String(today.getDate()).padStart(2, '0')) -1);
+var dd =  String(parseInt(String(today.getDate()).padStart(2, '0')));
 
 
 }
@@ -223,14 +223,15 @@ document.getElementById("demo").style.visibility = "hidden";
 
 		for (var i in pre_arr3)
 		{
-			if (pre_arr4[i] == [... new Set(pre_arr4)][1])
-			{
+			// if (pre_arr4[i] == [... new Set(pre_arr4)][1])
+			// {
 			pre_sum = pre_sum + parseInt(pre_arr3[i])
 			pre_sum1 = pre_sum1 + parseInt(pre_arr5[i])
 			pre_sum2 = pre_sum2 + parseInt(pre_arr6[i])
-			}
+			// }
 		}	
 
+		console.log(sum)
 		console.log(pre_sum)
 
 
@@ -248,6 +249,7 @@ document.getElementById("demo").style.visibility = "hidden";
   };
   
   var url = "https://cors-anywhere.herokuapp.com/https://data.thejeshgn.com/covid19/_design/india/_view/incidents?descending=false&nounce="+yyyy+mm+0+dd
+ //var url = "https://yacdn.org/serve/https://data.thejeshgn.com/covid19/_design/india/_view/incidents?descending=false&nounce="+yyyy+mm+0+dd 
   console.log(url)
   xhttp.open("GET", url , true);
   xhttp.send();
