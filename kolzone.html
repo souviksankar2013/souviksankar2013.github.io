@@ -87,7 +87,7 @@ Tabletop.init( { key: "1TSVqnGUPTpbLq18kQj2_bDN3tUDpsQkiCDfhpfm4eEo", callback: 
 
 function getdata(d, tabletop) {
 		var data, metadata = [];
-		data = tabletop.sheets("Sheet1").elements;
+		data = tabletop.sheets("Sheet3").elements;
 		//metadata = tabletop.sheets("readme").elements;
 
 
@@ -225,7 +225,7 @@ for (var i=0;i<arr8.length;i++)
 };
 var unit = 'meters';
 
-var buffered = turf.buffer(pt, 130, unit);
+var buffered = turf.buffer(pt, 160, unit);
 //var result = turf.featurecollection([buffered, pt]);
 
 var bufferLayer500 =L.geoJson(buffered).addTo(map); 
