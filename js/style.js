@@ -36,7 +36,7 @@ var yyyy = today.getFullYear();
 
 today = yyyy + '-' + mm + '-' + String(dd);
 yesterday = yyyy + '-' + mm + '-' + String(dd-1);
-console.log(yesterday);
+console.log(today);
 
 arr=[]
 	  arr2=[]
