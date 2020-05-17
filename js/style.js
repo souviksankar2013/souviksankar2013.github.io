@@ -62,37 +62,103 @@ pre_arr6=[]
 
 
 
-Tabletop.init( { key: "1AL1cj_33m3D7JkT-_wPB7LPJAqIfV2Y5XVMui7nczy4", callback: getdata, simpleSheet: false } );
+// Tabletop.init( { key: "1AL1cj_33m3D7JkT-_wPB7LPJAqIfV2Y5XVMui7nczy4", callback: getdata, simpleSheet: false } );
 
-function getdata(d, tabletop) {
-		var data, metadata = [];
-		data = tabletop.sheets("raw").elements;
-		metadata = tabletop.sheets("readme").elements;
+// function getdata(d, tabletop) {
+// 		var data, metadata = [];
+// 		data = tabletop.sheets("raw").elements;
+// 		metadata = tabletop.sheets("readme").elements;
 
 
 		
 		
-		for ( var i = 0; i < data.length; i++ ){
-			arr17.push(data[i]["District"])
-			arr18.push(data[i]["Confirmed Cases"])
-			arr19.push(data[i]["Discharged"])
-			arr20.push(data[i]["Deaths"])
-			arr21.push(data[i]["Active"])
-		}
-		document.getElementById("demo6").innerHTML = arr17
+// 		for ( var i = 0; i < data.length; i++ ){
+// 			arr17.push(data[i]["District"])
+// 			arr18.push(data[i]["Confirmed Cases"])
+// 			arr19.push(data[i]["Discharged"])
+// 			arr20.push(data[i]["Deaths"])
+// 			arr21.push(data[i]["Active"])
+// 		}
+// 		document.getElementById("demo6").innerHTML = arr17
+// 		document.getElementById("demo7").innerHTML = arr18
+// 		document.getElementById("demo8").innerHTML = arr19
+// 		document.getElementById("demo9").innerHTML = arr20
+// 		document.getElementById("demo10").innerHTML = arr21
+
+// 		document.getElementById("demo6").style.visibility = "hidden";
+// 	document.getElementById("demo7").style.visibility = "hidden";
+// 	document.getElementById("demo8").style.visibility = "hidden";
+// 	document.getElementById("demo9").style.visibility = "hidden";
+// 	document.getElementById("demo10").style.visibility = "hidden";
+
+
+// 	}
+
+
+var xhttp1 = new XMLHttpRequest();
+  xhttp1.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      //document.getElementById("demo").innerHTML =
+      //this.responseText;
+	  
+	  var res = this.responseText;
+	  var obj = JSON.parse(res);
+	  console.log(obj)
+
+	  console.log(obj[0].districtData[1])
+	  
+	  for (var i=0;i<obj.length;i++)
+	  {
+		  for (var j=0;j<obj[i].districtData.length;j++)
+		  {
+
+			arr17.push(obj[i].districtData[j].district)
+			arr18.push(obj[i].districtData[j].confirmed)
+			arr19.push(obj[i].districtData[j].recovered)
+			arr20.push(obj[i].districtData[j].deceased)
+			arr21.push(obj[i].districtData[j].active)
+
+		  }
+		
+
+	  }
+
+	  		document.getElementById("demo6").innerHTML = arr17
 		document.getElementById("demo7").innerHTML = arr18
 		document.getElementById("demo8").innerHTML = arr19
 		document.getElementById("demo9").innerHTML = arr20
 		document.getElementById("demo10").innerHTML = arr21
 
-		document.getElementById("demo6").style.visibility = "hidden";
-	document.getElementById("demo7").style.visibility = "hidden";
-	document.getElementById("demo8").style.visibility = "hidden";
-	document.getElementById("demo9").style.visibility = "hidden";
-	document.getElementById("demo10").style.visibility = "hidden";
 
+
+	// 			document.getElementById("demo6").style.visibility = "hidden";
+	// document.getElementById("demo7").style.visibility = "hidden";
+	// document.getElementById("demo8").style.visibility = "hidden";
+	// document.getElementById("demo9").style.visibility = "hidden";
+	// document.getElementById("demo10").style.visibility = "hidden";
+	  
 
 	}
+	
+}
+
+var url1 = "https://chatbot2013.herokuapp.com/dis"
+ //var url = "https://yacdn.org/serve/https://data.thejeshgn.com/covid19/_design/india/_view/incidents?descending=false&nounce="+yyyy+mm+0+dd 
+//   console.log(url)
+  xhttp1.open("GET", url1 , true);
+  xhttp1.send();
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -248,7 +314,7 @@ document.getElementById("demo").style.visibility = "hidden";
     }
   };
   
-  var url = "https://cors-anywhere.herokuapp.com/https://data.thejeshgn.com/covid19/_design/india/_view/incidents?descending=false&nounce="+yyyy+mm+0+dd
+  var url = "https://chatbot2013.herokuapp.com/state"
  //var url = "https://yacdn.org/serve/https://data.thejeshgn.com/covid19/_design/india/_view/incidents?descending=false&nounce="+yyyy+mm+0+dd 
   console.log(url)
   xhttp.open("GET", url , true);
@@ -260,11 +326,22 @@ $(document).ready(function () {
     setTimeout(function(){
       $(".loader-wrapper").fadeOut("slow");  
 
-var map = L.map('map').setView([23.076748, 78.292226 ], 5);
+var map = L.map('map').setView([23.768511, 82.252382], 5);
+var map1 = L.map('map1').setView([23.076748, 78.292226 ], 5);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map1);
+
+
+
+
+
+map.sync(map1);
+map1.sync(map);
 
 //function onEachFeature(feature, layer) {
 	//var popupContent = "<p>I started out as a GeoJSON " +
@@ -277,12 +354,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 function getColor(d) {
-    return d >= 0 && d <=1000 ? '#DC143C' :
-           d > 1000 && d <= 2000  ? '#800026' :
+    return d > 0 && d <=500 ? '#DC143C' :
+           d > 500 && d <= 2000  ? '#800026' :
            d > 2000 && d<=5000 ? '#8b0023' :
 		   d > 5000 ? '#000000' :
            
-                      '#000000';
+                      '#228B22';
 }
 
 function getColor1(d) {
@@ -316,11 +393,11 @@ var legend1 = L.control({ position: "bottomleft" });
 
 legend1.onAdd = function(map) {
   var div = L.DomUtil.create("div", "legend");
-  div.innerHTML += "<h4>Total Confirmed</h4>";
-  div.innerHTML += '<i style="background:#000000"></i><span>100-500</span><br>';
-  div.innerHTML += '<i style="background: #800026"></i><span>50-100</span><br>';
-  div.innerHTML += '<i style="background: #DC143C"></i><span>0-50</span><br>';
-  div.innerHTML += '<i style="background: #0000FF"></i><span>No patient</span><br>';
+  div.innerHTML += "<h4>Active Patients</h4>";
+  div.innerHTML += '<i style="background:#000000"></i><span>500+</span><br>';
+  div.innerHTML += '<i style="background: #800026"></i><span>20-500</span><br>';
+  div.innerHTML += '<i style="background: #DC143C"></i><span>1-20</span><br>';
+  div.innerHTML += '<i style="background: #228B22"></i><span>Covid19 Free</span><br>';
   //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
   //div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
   //div.innerHTML += '<i class="icon" style="background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/194515-200.png);background-repeat: no-repeat;"></i><span>Grænse</span><br>';
@@ -329,17 +406,18 @@ legend1.onAdd = function(map) {
 
   return div;
 };
-
+legend1.addTo(map1);
 
 var legend = L.control({ position: "bottomleft" });
 
 legend.onAdd = function(map) {
   var div = L.DomUtil.create("div", "legend");
-  div.innerHTML += "<h4>Total Confirmed</h4>";
+  div.innerHTML += "<h4>Active Patients</h4>";
   div.innerHTML += '<i style="background:#000000"></i><span>5000+</span><br>';
   div.innerHTML += '<i style="background: #800026"></i><span>1000-5000</span><br>';
   div.innerHTML += '<i style="background: #DC143C"></i><span>0-1000</span><br>';
   div.innerHTML += '<i style="background: #0000FF"></i><span>No patient</span><br>';
+  div.innerHTML += '<i style="background: #228B22"></i><span>Covid19 Free</span><br>';
   //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
   //div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
   //div.innerHTML += '<i class="icon" style="background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/194515-200.png);background-repeat: no-repeat;"></i><span>Grænse</span><br>';
@@ -377,18 +455,18 @@ setTimeout(function(){
 		if(arr27[i] == feature.properties.dtname)
 			{
 
-				if (arr28[i] > 50) color = "#000000";
-				else if (arr28[i] > 20 && arr28[i] <= 50 ) color = "#8b0023";
-				else if (arr28[i] > 10 && arr28[i] <= 20) color = "#800026";
-				else if (arr28[i] >= 1 && arr28[i] <= 10) color = "#DC143C";
-				else {color = "#feebe2";}
+				if (arr31[i] > 500) color = "#000000";
+				else if (arr31[i] > 100 && arr31[i] <= 500 ) color = "#8b0023";
+				else if (arr31[i] > 20 && arr31[i] <= 100) color = "#800026";
+				else if (arr31[i] >= 1 && arr31[i] <= 20) color = "#DC143C";
+				else {color = "#228B22";}
 
 				return {
           fillColor: color,
-          weight: 1,
+          weight: 3,
           opacity: 0.4,
-          color: 'black',
-          dashArray: '1',
+          color: 'white',
+          dashArray: '5',
 		  fillOpacity: 0.7,
 		  
 		};
@@ -402,7 +480,7 @@ function style1(feature)
 {
 	return{
 		
-		weight: 5,
+		weight: 3,
           opacity: 0.9,
           color: "black",
           fill: false
@@ -426,14 +504,30 @@ function style1(feature)
 			if(arr27[i] == feature.properties.dtname)
 			{
        layer.bindPopup("<p>State: "+ feature.properties.stname +" <br> District :" + feature.properties.dtname +" <br> Confirmed :" + arr28[i] +"<br> Discharged " + arr29[i] + "<br> Death: " + arr30[i] + "<br> Active: " + arr31[i] + "<br></p>")}}}
-});
+})
+
+
+var dist1 = L.geoJson(geodist, {
+	style: style,
+onEachFeature: function (feature, layer) {
+	
+	for (var i in arr27)
+	{
+		
+		if(arr27[i] == feature.properties.dtname)
+		{
+   layer.bindPopup("<p>State: "+ feature.properties.stname +" <br> District :" + feature.properties.dtname +" <br> Confirmed :" + arr28[i] +"<br> Discharged " + arr29[i] + "<br> Death: " + arr30[i] + "<br> Active: " + arr31[i] + "<br></p>")}}}
+}).addTo(map1);
 
 var state1 = L.geoJson(geoStates,{
 		style: style1})
 
+		var state2 = L.geoJson(geoStates,{
+			style: style1}).addTo(map1)
 
 
 
+			
 		
 
 
@@ -450,6 +544,7 @@ if (currentZoom >= 7)
 	state1.addTo(map);
 	map.removeControl(legend);
 	legend1.addTo(map);
+	legend1.addTo(map1);
 	
 
 }
@@ -457,7 +552,7 @@ if (currentZoom >= 7)
 });
 
 		
-	  }, 10000);
+	  }, 5000);
 
 
 
@@ -491,17 +586,20 @@ setTimeout(function(){
 	arr91 = arr91.split(",")
 	arr92 = arr92.split(",")
 	arr93 = arr93.split(",")
+
+	
 	
 	function style(feature) {
 		for (var i in arr7)
 		{
+			
 		if(arr7[i] == feature.properties.st_code)
 			{
 
 
     return {
 		
-        fillColor: getColor(arr8[i]),
+        fillColor: getColor(arr8[i]-arr10[i]-arr11[i]),
 		weight: 2,
         opacity: 1,
         color: 'white',
@@ -541,6 +639,7 @@ if (currentZoom < 7)
     state.addTo(map)
 	map.removeControl(legend1);
 	legend.addTo(map);
+	legend1.addTo(map1);
 
 }
 
@@ -548,7 +647,7 @@ if (currentZoom < 7)
 
 
 
-	  }, 5000);
+	  }, 3000);
 
 
 
@@ -620,7 +719,7 @@ if (currentZoom < 7)
 
 
 
-    }, 5000);
+    }, 2000);
 });
 
 
