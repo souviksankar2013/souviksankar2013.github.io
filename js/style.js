@@ -131,11 +131,11 @@ var xhttp1 = new XMLHttpRequest();
 
 
 
-	// 			document.getElementById("demo6").style.visibility = "hidden";
-	// document.getElementById("demo7").style.visibility = "hidden";
-	// document.getElementById("demo8").style.visibility = "hidden";
-	// document.getElementById("demo9").style.visibility = "hidden";
-	// document.getElementById("demo10").style.visibility = "hidden";
+				document.getElementById("demo6").style.visibility = "hidden";
+	document.getElementById("demo7").style.visibility = "hidden";
+	document.getElementById("demo8").style.visibility = "hidden";
+	document.getElementById("demo9").style.visibility = "hidden";
+	document.getElementById("demo10").style.visibility = "hidden";
 	  
 
 	}
