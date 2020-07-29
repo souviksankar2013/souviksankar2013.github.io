@@ -7,7 +7,7 @@ var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 if (today.getHours() >= 17 && today.getHours() <=23)
 {
 	if (dd<=9)
-var dd = 0+String(parseInt(String(today.getDate()).padStart(2, '0')));
+var dd = String(parseInt(String(today.getDate()).padStart(2, '0')));
 
 else
 
@@ -37,6 +37,7 @@ var yyyy = today.getFullYear();
 today = yyyy + '-' + mm + '-' + String(dd);
 yesterday = yyyy + '-' + mm + '-' + String(dd-1);
 console.log(today);
+console.log(yesterday);
 
 arr=[]
 	  arr2=[]
@@ -354,19 +355,19 @@ map1.sync(map);
 
 
 function getColor(d) {
-    return d > 0 && d <=500 ? '#DC143C' :
-           d > 500 && d <= 2000  ? '#800026' :
-           d > 2000 && d<=5000 ? '#8b0023' :
-		   d > 5000 ? '#000000' :
+    return d > 0 && d <=5000 ? '#DC143C' :
+           d > 5000 && d <= 20000  ? '#800026' :
+           d > 20000 && d<=50000 ? '#8b0023' :
+		   d > 50000 ? '#000000' :
            
                       '#228B22';
 }
 
 function getColor1(d) {
-    return d >= 0 && d <50 ? '#DC143C' :
-           d > 50 && d < 100  ? '#800026' :
-           d > 100 && d<500 ? '#8b0023' :
-		   d > 501 ? '#000000' :
+    return d >= 0 && d <500 ? '#DC143C' :
+           d > 500 && d < 1000 ? '#800026' :
+           d > 1000 && d<5000 ? '#8b0023' :
+		   d > 5010 ? '#000000' :
            
                       '#000000';
 }
@@ -394,9 +395,9 @@ var legend1 = L.control({ position: "bottomleft" });
 legend1.onAdd = function(map) {
   var div = L.DomUtil.create("div", "legend");
   div.innerHTML += "<h4>Active Patients</h4>";
-  div.innerHTML += '<i style="background:#000000"></i><span>500+</span><br>';
-  div.innerHTML += '<i style="background: #800026"></i><span>20-500</span><br>';
-  div.innerHTML += '<i style="background: #DC143C"></i><span>1-20</span><br>';
+  div.innerHTML += '<i style="background:#000000"></i><span>5000+</span><br>';
+  div.innerHTML += '<i style="background: #800026"></i><span>200-5000</span><br>';
+  div.innerHTML += '<i style="background: #DC143C"></i><span>10-200</span><br>';
   div.innerHTML += '<i style="background: #228B22"></i><span>Covid19 Free</span><br>';
   //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
   //div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
@@ -413,9 +414,9 @@ var legend = L.control({ position: "bottomleft" });
 legend.onAdd = function(map) {
   var div = L.DomUtil.create("div", "legend");
   div.innerHTML += "<h4>Active Patients</h4>";
-  div.innerHTML += '<i style="background:#000000"></i><span>5000+</span><br>';
-  div.innerHTML += '<i style="background: #800026"></i><span>1000-5000</span><br>';
-  div.innerHTML += '<i style="background: #DC143C"></i><span>0-1000</span><br>';
+  div.innerHTML += '<i style="background:#000000"></i><span>50000+</span><br>';
+  div.innerHTML += '<i style="background: #800026"></i><span>10000-50000</span><br>';
+  div.innerHTML += '<i style="background: #DC143C"></i><span>0-10000</span><br>';
   div.innerHTML += '<i style="background: #0000FF"></i><span>No patient</span><br>';
   div.innerHTML += '<i style="background: #228B22"></i><span>Covid19 Free</span><br>';
   //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
@@ -593,7 +594,7 @@ setTimeout(function(){
 		for (var i in arr7)
 		{
 			
-		if(arr7[i] == feature.properties.st_code)
+		if(arr7[i] == feature.properties.st_code.toUpperCase())
 			{
 
 
@@ -619,7 +620,7 @@ setTimeout(function(){
 		for (var i in arr7)
 		{
 			
-			if(arr7[i] == feature.properties.st_code)
+			if(arr7[i] == feature.properties.st_code.toUpperCase())
 			{
        layer.bindPopup("<p>"+ feature.properties.S_NAME +" <br> Confirmed :" + arr8[i] +" (+"+arr91[i]+ ")<br> Cured " + arr10[i] +" (+"+arr92[i]+ ")<br> Death " + arr11[i] +" (+"+arr93[i]+ ")<br></p>")}}}
 }).addTo(map);
