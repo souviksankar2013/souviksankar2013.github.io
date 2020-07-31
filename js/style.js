@@ -594,7 +594,8 @@ setTimeout(function(){
 		for (var i in arr7)
 		{
 			
-		if(arr7[i] == feature.properties.st_code.toUpperCase())
+		//if(arr7[i] == feature.properties.st_code.toUpperCase())
+		if(arr7[i] == feature.properties.st_code)
 			{
 
 
@@ -620,7 +621,9 @@ setTimeout(function(){
 		for (var i in arr7)
 		{
 			
-			if(arr7[i] == feature.properties.st_code.toUpperCase())
+			//if(arr7[i] == feature.properties.st_code.toUpperCase())
+
+			if(arr7[i] == feature.properties.st_code)
 			{
        layer.bindPopup("<p>"+ feature.properties.S_NAME +" <br> Confirmed :" + arr8[i] +" (+"+arr91[i]+ ")<br> Cured " + arr10[i] +" (+"+arr92[i]+ ")<br> Death " + arr11[i] +" (+"+arr93[i]+ ")<br></p>")}}}
 }).addTo(map);
