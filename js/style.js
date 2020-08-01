@@ -32,10 +32,40 @@ var dd =  String(parseInt(String(today.getDate()).padStart(2, '0')));
 // }
 
 
+var date1 = ""
+var date2= ""
+
+
 var yyyy = today.getFullYear();
 
-today = yyyy + '-' + mm + '-' + String(dd);
-yesterday = yyyy + '-' + mm + '-' + String(dd-1);
+if(dd>=1 && dd<10)
+{
+	var date1 = '0'+String(dd)
+	var date2 = '0'+String(dd-1)
+
+//today = yyyy + '-' + mm + '-' + '0'+String(dd);
+}
+
+else
+{
+	var date1 = String(dd)
+	var date2 = String(dd-1)
+	//today = yyyy + '-' + mm + '-' + String(dd);
+}
+
+
+today = yyyy + '-' + mm + '-' + date1;
+
+if (dd = 1)
+{
+	yesterday = yyyy + '-' + '0'+String (mm -1) + '-' + '31';
+}
+else
+{
+yesterday = yyyy + '-' + mm + '-' + date2;
+}
+
+
 console.log(today);
 console.log(yesterday);
 
@@ -363,14 +393,14 @@ function getColor(d) {
                       '#228B22';
 }
 
-function getColor1(d) {
-    return d >= 0 && d <500 ? '#DC143C' :
-           d > 500 && d < 1000 ? '#800026' :
-           d > 1000 && d<5000 ? '#8b0023' :
-		   d > 5010 ? '#000000' :
+// function getColor1(d) {
+//     return d >= 0 && d <500 ? '#DC143C' :
+//            d > 500 && d < 1000 ? '#800026' :
+//            d > 1000 && d<5000 ? '#8b0023' :
+// 		   d > 5010 ? '#000000' :
            
-                      '#000000';
-}
+//                       '#228B22';
+// }
 
 function clean_map() {
     map.eachLayer(function (layer) {
@@ -417,7 +447,7 @@ legend.onAdd = function(map) {
   div.innerHTML += '<i style="background:#000000"></i><span>50000+</span><br>';
   div.innerHTML += '<i style="background: #800026"></i><span>10000-50000</span><br>';
   div.innerHTML += '<i style="background: #DC143C"></i><span>0-10000</span><br>';
-  div.innerHTML += '<i style="background: #0000FF"></i><span>No patient</span><br>';
+  //div.innerHTML += '<i style="background: #0000FF"></i><span>No patient</span><br>';
   div.innerHTML += '<i style="background: #228B22"></i><span>Covid19 Free</span><br>';
   //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
   //div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
@@ -456,10 +486,10 @@ setTimeout(function(){
 		if(arr27[i] == feature.properties.dtname)
 			{
 
-				if (arr31[i] > 500) color = "#000000";
-				else if (arr31[i] > 100 && arr31[i] <= 500 ) color = "#8b0023";
-				else if (arr31[i] > 20 && arr31[i] <= 100) color = "#800026";
-				else if (arr31[i] >= 1 && arr31[i] <= 20) color = "#DC143C";
+				if (arr31[i] > 5000) color = "#000000";
+				else if (arr31[i] > 1000 && arr31[i] <= 5000 ) color = "#8b0023";
+				else if (arr31[i] > 500 && arr31[i] <= 1000) color = "#800026";
+				else if (arr31[i] >= 1 && arr31[i] <= 500) color = "#DC143C";
 				else {color = "#228B22";}
 
 				return {
