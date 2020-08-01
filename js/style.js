@@ -426,8 +426,8 @@ legend1.onAdd = function(map) {
   var div = L.DomUtil.create("div", "legend");
   div.innerHTML += "<h4>Active Patients</h4>";
   div.innerHTML += '<i style="background:#000000"></i><span>5000+</span><br>';
-  div.innerHTML += '<i style="background: #800026"></i><span>200-5000</span><br>';
-  div.innerHTML += '<i style="background: #DC143C"></i><span>10-200</span><br>';
+  div.innerHTML += '<i style="background: #800026"></i><span>500-5000</span><br>';
+  div.innerHTML += '<i style="background: #DC143C"></i><span>1-500</span><br>';
   div.innerHTML += '<i style="background: #228B22"></i><span>Covid19 Free</span><br>';
   //div.innerHTML += '<i style="background: #FF4500"></i><span>Residential</span><br>';
   //div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
@@ -487,8 +487,8 @@ setTimeout(function(){
 			{
 
 				if (arr31[i] > 5000) color = "#000000";
-				else if (arr31[i] > 1000 && arr31[i] <= 5000 ) color = "#8b0023";
-				else if (arr31[i] > 500 && arr31[i] <= 1000) color = "#800026";
+				else if (arr31[i] > 500 && arr31[i] <= 5000 ) color = "#8b0023";
+				// else if (arr31[i] > 500 && arr31[i] <= 1000) color = "#800026";
 				else if (arr31[i] >= 1 && arr31[i] <= 500) color = "#DC143C";
 				else {color = "#228B22";}
 
