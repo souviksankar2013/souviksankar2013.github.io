@@ -56,7 +56,7 @@ else
 
 today = yyyy + '-' + mm + '-' + date1;
 
-if (dd = 1)
+if (dd == 1)
 {
 	yesterday = yyyy + '-' + '0'+String (mm -1) + '-' + '31';
 }
