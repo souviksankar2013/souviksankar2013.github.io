@@ -36,6 +36,7 @@ var date1 = ""
 var date2= ""
 
 
+
 var yyyy = today.getFullYear();
 
 if(dd>=1 && dd<10)
@@ -46,11 +47,18 @@ if(dd>=1 && dd<10)
 //today = yyyy + '-' + mm + '-' + '0'+String(dd);
 }
 
+else if (dd==10)
+{
+	var date1 = String(dd)
+	var date2 = '0'+String(dd-1)
+	//today = yyyy + '-' + mm + '-' + String(dd);
+}
+
 else
 {
 	var date1 = String(dd)
 	var date2 = String(dd-1)
-	//today = yyyy + '-' + mm + '-' + String(dd);
+
 }
 
 
