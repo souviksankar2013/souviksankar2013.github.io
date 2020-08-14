@@ -181,7 +181,7 @@ var xhttp1 = new XMLHttpRequest();
 	
 }
 
-var url1 = "https://chatbot2013.herokuapp.com/dis"
+var url1 = "https://chatbot2013.herokuapp.com/dis_nounder"
  //var url = "https://yacdn.org/serve/https://data.thejeshgn.com/covid19/_design/india/_view/incidents?descending=false&nounce="+yyyy+mm+0+dd 
 //   console.log(url)
   xhttp1.open("GET", url1 , true);
